@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/tree-size-pricing",
+  "title": "Tree Size & Pricing Grid",
+  "description": "Responsive multi-column tree size and price cards section featuring optional highlighted/featured tier, height pill badge, icon, and Frijole price typography.",
+  "category": "xmastree-blocks",
+  "icon": "tag",
+  "keywords": [
+    "pricing",
+    "tree size",
+    "sizes",
+    "prices",
+    "cards",
+    "monterey pine",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

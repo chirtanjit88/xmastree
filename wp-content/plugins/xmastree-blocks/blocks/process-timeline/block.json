@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/process-timeline",
+  "title": "Process Steps Timeline",
+  "description": "Horizontal multi-step process timeline cards with dashed connector line, numbered crimson badges, icons, titles, and descriptions.",
+  "category": "xmastree-blocks",
+  "icon": "list-view",
+  "keywords": [
+    "steps",
+    "timeline",
+    "process",
+    "how it works",
+    "cards",
+    "real tree",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

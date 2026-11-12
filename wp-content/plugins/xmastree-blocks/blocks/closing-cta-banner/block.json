@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/closing-cta-banner",
+  "title": "Closing CTA Banner",
+  "description": "Full-width background photo banner with dark gradient overlay, centered two-tone uppercase heading, subtitle, and primary + outline CTA buttons.",
+  "category": "xmastree-blocks",
+  "icon": "cover-image",
+  "keywords": [
+    "cta",
+    "closing",
+    "banner",
+    "directions",
+    "farms",
+    "christmas",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

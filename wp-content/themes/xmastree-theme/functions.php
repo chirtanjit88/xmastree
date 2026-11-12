@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Theme version constant for cache busting.
  */
 if ( ! defined( 'XMASTREE_THEME_VERSION' ) ) {
-	define( 'XMASTREE_THEME_VERSION', '1.0.22' );
+	define( 'XMASTREE_THEME_VERSION', '1.0.27' );
 }
 
 if ( ! function_exists( 'xmastree_theme_setup' ) ) :

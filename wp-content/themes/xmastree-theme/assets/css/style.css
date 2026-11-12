@@ -8244,5 +8244,690 @@ body.xmastree-lightbox-open {
   }
 }
 
+/* ==========================================================================
+   Monterey Pine Showcase Block (Meet the Monterey Pine - real-christmas-trees.html)
+   ========================================================================== */
+.realtree-monterey-section {
+  background-color: #FFFFFF;
+  padding: 72px 0;
+}
+
+.realtree-monterey-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 2.8vw, 40px);
+  font-weight: 600;
+  color: #001C0E;
+  text-transform: uppercase;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.realtree-monterey-content h2 span {
+  color: #AB0030;
+}
+
+.realtree-monterey-content h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 600;
+  color: #001C0E;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.realtree-monterey-content p {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.7;
+  color: #383838;
+  margin-bottom: 16px;
+}
+
+.realtree-monterey-copy > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Growing Period Highlight Card */
+.realtree-stat-card {
+  margin-top: 26px;
+  background-color: #FFF6F5;
+  border: 1px solid #AB0030;
+  border-left: 5px solid #AB0030;
+  border-radius: 16px;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.realtree-stat-badge {
+  background-color: #001C0E;
+  color: #FFFFFF;
+  border-radius: 14px;
+  padding: 14px 18px;
+  text-align: center;
+  flex-shrink: 0;
+  min-width: 124px;
+}
+
+.realtree-stat-badge strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+
+.realtree-stat-badge span {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #F4E8C1;
+  margin-top: 4px;
+}
+
+.realtree-stat-text {
+  min-width: 0;
+}
+
+.realtree-stat-text h4 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: #001C0E;
+  margin-bottom: 4px;
+}
+
+.realtree-stat-text p {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: #383838;
+  margin-bottom: 0;
+}
+
+/* Dual Photo Showcase */
+.realtree-photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.realtree-photo-pair--single {
+  grid-template-columns: 1fr;
+}
+
+.realtree-photo-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 440px;
+  box-shadow: 0 10px 30px rgba(0, 28, 14, 0.1);
+  border: 0.3px solid #AB0030;
+}
+
+.realtree-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.realtree-photo-card:hover img {
+  transform: scale(1.04);
+}
+
+.realtree-photo-caption {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  background: rgba(0, 28, 14, 0.85);
+  color: #FFFFFF;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .realtree-monterey-section {
+    padding: 56px 0;
+  }
+
+  .realtree-photo-card {
+    height: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .realtree-monterey-section {
+    padding: 46px 0;
+  }
+
+  .realtree-photo-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .realtree-photo-card {
+    height: 290px;
+  }
+
+  .realtree-stat-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+/* ==========================================================================
+   Tree Size & Pricing Grid Block (real-christmas-trees.html)
+   ========================================================================== */
+.realtree-pricing-section {
+  background-color: #FFFFFF;
+  padding: 72px 0;
+}
+
+.realtree-pricing-header {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.realtree-pricing-header p {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4A4A4A;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.realtree-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.realtree-pricing-grid--cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.realtree-pricing-grid--cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.realtree-price-card {
+  background: #FFFFFF;
+  border: 1px solid #AB0030;
+  border-radius: 20px;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.realtree-price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(171, 0, 48, 0.14);
+}
+
+.realtree-price-card.realtree-price-featured {
+  background: linear-gradient(180deg, #001C0E 0%, #0D3320 100%);
+  border-color: #001C0E;
+  color: #FFFFFF;
+}
+
+.realtree-price-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #FFF6F5;
+  color: #001C0E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.realtree-price-icon-img {
+  max-width: 28px;
+  max-height: 28px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.realtree-price-card.realtree-price-featured .realtree-price-icon {
+  background-color: rgba(255, 255, 255, 0.14);
+  color: #F4E8C1;
+}
+
+.realtree-size-name {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #001C0E;
+  margin-bottom: 10px;
+}
+
+.realtree-price-card.realtree-price-featured .realtree-size-name {
+  color: #FFFFFF;
+}
+
+.realtree-size-height {
+  display: inline-block;
+  background-color: #FAF7F2;
+  border: 1px solid #E2DDD3;
+  color: #001C0E;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.realtree-price-card.realtree-price-featured .realtree-size-height {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+}
+
+.realtree-size-price {
+  font-family: var(--font-frijole);
+  font-size: 28px;
+  line-height: 1.2;
+  color: #AB0030;
+  margin-top: auto;
+}
+
+.realtree-price-card.realtree-price-featured .realtree-size-price {
+  color: #F4E8C1;
+}
+
+@media (max-width: 1199px) {
+  .realtree-pricing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .realtree-pricing-section {
+    padding: 56px 0;
+  }
+
+  .realtree-pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .realtree-pricing-section {
+    padding: 46px 0;
+  }
+
+  .realtree-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Process Steps Timeline Block (How It Works - real-christmas-trees.html)
+   ========================================================================== */
+.realtree-steps-section {
+  background-color: #FAF7F2;
+  padding: 72px 0;
+}
+
+.realtree-steps-section .section-header {
+  margin-bottom: 54px;
+}
+
+.realtree-steps-section .section-header p {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4A4A4A;
+  max-width: 720px;
+  margin: 14px auto 0;
+}
+
+.realtree-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  position: relative;
+}
+
+.realtree-timeline--cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.realtree-timeline--cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.realtree-timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  border-top: 2px dashed rgba(171, 0, 48, 0.45);
+  z-index: 0;
+}
+
+.realtree-timeline--no-line::before {
+  display: none !important;
+}
+
+.realtree-step-card {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  border: 1px solid #EAE5DC;
+  border-radius: 20px;
+  padding: 28px 22px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(0, 28, 14, 0.04);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.realtree-step-card:hover {
+  transform: translateY(-4px);
+  border-color: #AB0030;
+}
+
+.realtree-step-number {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: #AB0030;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 16px rgba(171, 0, 48, 0.25);
+  border: 4px solid #FFFFFF;
+}
+
+.realtree-step-icon {
+  font-size: 26px;
+  color: #001C0E;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.realtree-step-icon-img {
+  max-width: 30px;
+  max-height: 30px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.realtree-step-card h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: #001C0E;
+  margin-bottom: 10px;
+}
+
+.realtree-step-card p {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4A4A4A;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .realtree-steps-section {
+    padding: 56px 0;
+  }
+
+  .realtree-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .realtree-timeline::before {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .realtree-steps-section {
+    padding: 46px 0;
+  }
+
+  .realtree-steps-section .section-header {
+    margin-bottom: 36px;
+  }
+
+  .realtree-timeline {
+    grid-template-columns: 1fr;
+    padding-left: 24px;
+  }
+
+  .realtree-timeline::before {
+    display: block;
+    top: 30px;
+    bottom: 30px;
+    left: 24px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    border-top: none;
+    border-left: 2px dashed rgba(171, 0, 48, 0.45);
+  }
+
+  .realtree-step-card {
+    text-align: left;
+    align-items: flex-start;
+    margin-left: 16px;
+    padding: 24px 20px;
+  }
+
+  .realtree-step-icon-img {
+    margin: 0;
+  }
+
+  .realtree-step-number {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+}
+
+/* ==========================================================================
+   Tree Care Callout Panel Block (Look After Your Tree - real-christmas-trees.html)
+   ========================================================================== */
+.realtree-care-section {
+  background-color: #FFFFFF;
+  padding: 72px 0;
+}
+
+.realtree-care-panel {
+  background-color: #FFF6F5;
+  border: 0.3px solid #AB0030;
+  border-radius: 24px;
+  padding: 46px;
+  overflow: hidden;
+}
+
+.realtree-care-img-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  height: 360px;
+  box-shadow: 0 10px 26px rgba(0, 28, 14, 0.12);
+}
+
+.realtree-care-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.realtree-care-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 2.5vw, 36px);
+  font-weight: 600;
+  color: #001C0E;
+  text-transform: uppercase;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.realtree-care-content h2 span {
+  color: #AB0030;
+}
+
+.realtree-care-content p {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.7;
+  color: #383838;
+  margin-bottom: 28px;
+}
+
+.realtree-care-content .realtree-care-copy:last-child p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .realtree-care-section {
+    padding: 56px 0;
+  }
+
+  .realtree-care-panel {
+    padding: 34px 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .realtree-care-section {
+    padding: 46px 0;
+  }
+
+  .realtree-care-img-wrap {
+    height: 250px;
+  }
+
+  .realtree-care-panel {
+    padding: 24px 18px;
+  }
+}
+
+/* ==========================================================================
+   Closing CTA Banner Block (Final CTA - real-christmas-trees.html)
+   ========================================================================== */
+.realtree-cta-section {
+  position: relative;
+  background-color: var(--bg-dark-section);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  overflow: hidden;
+}
+
+.realtree-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 28, 14, 0.72) 0%, rgba(0, 0, 0, 0.72) 100%);
+  z-index: 1;
+}
+
+.realtree-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.realtree-cta-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  line-height: 1.22;
+  margin-bottom: 16px;
+}
+
+.realtree-cta-content h2 span {
+  color: #F4E8C1;
+}
+
+.realtree-cta-content p {
+  font-family: var(--font-sans);
+  font-size: 19px;
+  line-height: 1.6;
+  color: #EDEDED;
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.realtree-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.realtree-cta-btn-icon {
+  max-width: 18px;
+  max-height: 18px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 575px) {
+  .realtree-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .realtree-cta-actions a {
+    width: 100%;
+  }
+}
+
+
+
 
 

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/monterey-pine-showcase",
+  "title": "Monterey Pine Showcase",
+  "description": "Two-column Monterey Pine story showcase with formatted copy, growing stat highlight card, and dual rounded photo cards with bottom captions.",
+  "category": "xmastree-blocks",
+  "icon": "palmtree",
+  "keywords": [
+    "monterey",
+    "pine",
+    "real tree",
+    "showcase",
+    "stat",
+    "photos",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

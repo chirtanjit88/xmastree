@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/tree-care-callout",
+  "title": "Tree Care Callout Panel",
+  "description": "Soft-blush rounded callout panel featuring a side photograph, two-tone uppercase heading, rich description, and crimson CTA button.",
+  "category": "xmastree-blocks",
+  "icon": "megaphone",
+  "keywords": [
+    "tree care",
+    "callout",
+    "panel",
+    "fresh",
+    "cta",
+    "photo",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

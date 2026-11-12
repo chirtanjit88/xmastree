@@ -1,0 +1,341 @@
+{
+    "key": "group_xmastree_monterey_pine_showcase",
+    "title": "Monterey Pine Showcase",
+    "fields": [
+        {
+            "key": "field_monterey_showcase_tab_story",
+            "label": "Story & Growing Stat",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_monterey_showcase_heading",
+            "label": "Section Heading",
+            "name": "showcase_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase heading (H2). Wrap highlighted words in <span>...<\/span> for crimson color (e.g. Meet the <span>Monterey Pine<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. Meet the <span>Monterey Pine<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_monterey_showcase_content",
+            "label": "Story Content",
+            "name": "showcase_content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Add descriptive paragraphs and optional Heading 3 (H3) subheadings (e.g. Grown With Care, Right Here).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_monterey_showcase_stat_value",
+            "label": "Stat Highlight Value",
+            "name": "showcase_stat_value",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Large value shown inside the dark-green badge (e.g. ~3.5).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. ~3.5",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_monterey_showcase_stat_label",
+            "label": "Stat Badge Label",
+            "name": "showcase_stat_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase sub-label below the value (e.g. Years Growing).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. Years Growing",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_monterey_showcase_stat_title",
+            "label": "Stat Card Title",
+            "name": "showcase_stat_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Heading displayed beside the dark-green badge (e.g. From Seed to Christmas).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. From Seed to Christmas",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_monterey_showcase_stat_description",
+            "label": "Stat Card Description",
+            "name": "showcase_stat_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Supporting sentence displayed inside the growing highlight card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 2,
+            "placeholder": "e.g. Trees take approximately three and a half years to grow before they're ready for Christmas.",
+            "new_lines": ""
+        },
+        {
+            "key": "field_monterey_showcase_tab_photos",
+            "label": "Showcase Photos",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_monterey_showcase_photos",
+            "label": "Showcase Photos",
+            "name": "showcase_photos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add two showcase photos to display side-by-side rounded photo cards with bottom caption pills.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 4,
+            "collapsed": "field_monterey_showcase_photo_caption",
+            "button_label": "Add Showcase Photo",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_monterey_showcase_photo_image",
+                    "label": "Photo",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Upload or choose a portrait or vertical showcase photograph.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "jpg,jpeg,png,webp",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_monterey_showcase_photos"
+                },
+                {
+                    "key": "field_monterey_showcase_photo_caption",
+                    "label": "Bottom Caption Pill",
+                    "name": "caption",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional dark-green caption bar displayed at the bottom of the photo card.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. Soft, Bright-Green Monterey Pine Needles",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_monterey_showcase_photos"
+                }
+            ]
+        },
+        {
+            "key": "field_monterey_showcase_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_monterey_showcase_media_position",
+            "label": "Photos Column Position",
+            "name": "showcase_media_position",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose which side displays the showcase photos on desktop screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "right": "Photos on Right (Default)",
+                "left": "Photos on Left (Reversed)"
+            },
+            "default_value": "right",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_monterey_showcase_bg_color",
+            "label": "Section Background Color",
+            "name": "showcase_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the section background color, or keep the default White (#FFFFFF).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/monterey-pine-showcase"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Meet the Monterey Pine showcase block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794517557
+}

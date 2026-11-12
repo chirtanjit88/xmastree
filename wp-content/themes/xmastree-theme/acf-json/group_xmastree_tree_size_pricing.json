@@ -1,0 +1,308 @@
+{
+    "key": "group_xmastree_tree_size_pricing",
+    "title": "Tree Size & Pricing Grid",
+    "fields": [
+        {
+            "key": "field_tree_pricing_tab_content",
+            "label": "Header & Pricing Tiers",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_tree_pricing_heading",
+            "label": "Section Heading",
+            "name": "pricing_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase heading (H2). Wrap highlighted words in <span>...<\/span> for crimson color (e.g. Find Your Perfect <span>Tree Size<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. Find Your Perfect <span>Tree Size<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tree_pricing_subtitle",
+            "label": "Section Subtitle",
+            "name": "pricing_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Short introductory sentence centered below the heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 2,
+            "placeholder": "e.g. From cosy spaces to grand Christmas celebrations, we have a real Christmas tree to suit your home.",
+            "new_lines": ""
+        },
+        {
+            "key": "field_tree_pricing_tiers",
+            "label": "Pricing Tiers",
+            "name": "pricing_tiers",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add tree size cards (e.g. Small, Medium, Large, Extra Large \/ Feature Tree, Premium \/ Feature Trees).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_tree_pricing_tier_name",
+            "button_label": "Add Pricing Tier",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_tree_pricing_tier_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "icon_picker",
+                    "instructions": "Choose a Bootstrap Icon (e.g. bi-tree-fill, bi-stars), Dashicon, or upload an SVG\/PNG icon.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "tabs": [
+                        "bootstrap_icons",
+                        "dashicons",
+                        "media_library",
+                        "url"
+                    ],
+                    "return_format": "string",
+                    "allow_in_bindings": 0,
+                    "library": "all",
+                    "default_value": {
+                        "type": null,
+                        "value": null
+                    },
+                    "parent_repeater": "field_tree_pricing_tiers"
+                },
+                {
+                    "key": "field_tree_pricing_tier_featured",
+                    "label": "Featured Dark Card",
+                    "name": "is_featured",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Enable dark evergreen highlight styling for this tier (e.g. Large).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Highlight as featured tier",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 1,
+                    "ui_on_text": "Featured",
+                    "ui_off_text": "Standard",
+                    "parent_repeater": "field_tree_pricing_tiers"
+                },
+                {
+                    "key": "field_tree_pricing_tier_name",
+                    "label": "Size Name",
+                    "name": "size_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Card heading (e.g. Small, Medium, Large, Extra Large \/ Feature Tree).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "34",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. Large",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_tree_pricing_tiers"
+                },
+                {
+                    "key": "field_tree_pricing_tier_height",
+                    "label": "Height Pill Label",
+                    "name": "size_height",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Badge shown below the title (e.g. 7 ft, Above 8 ft up to 14 ft).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. 7 ft",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_tree_pricing_tiers"
+                },
+                {
+                    "key": "field_tree_pricing_tier_price",
+                    "label": "Price Display",
+                    "name": "price",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Formatted price or label displayed in Frijole font (e.g. $120.00 or POA).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. $120.00",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_tree_pricing_tiers"
+                }
+            ]
+        },
+        {
+            "key": "field_tree_pricing_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_tree_pricing_columns",
+            "label": "Desktop Columns",
+            "name": "pricing_columns",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Number of pricing cards per row on desktop screens (>= 1200px).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "5": "5 Columns (Default)",
+                "4": "4 Columns",
+                "3": "3 Columns"
+            },
+            "default_value": 5,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_tree_pricing_bg_color",
+            "label": "Section Background Color",
+            "name": "pricing_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the section background color, or keep the default White (#FFFFFF).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/tree-size-pricing"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Tree Size & Pricing Grid section block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794518563
+}

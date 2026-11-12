@@ -1,0 +1,301 @@
+{
+    "key": "group_xmastree_closing_cta_banner",
+    "title": "Closing CTA Banner",
+    "fields": [
+        {
+            "key": "field_closing_cta_tab_content",
+            "label": "Banner Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_closing_cta_bg_image",
+            "label": "Background Image",
+            "name": "cta_banner_bg_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Full-width landscape photograph displayed behind the dark overlay.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg,jpeg,png,webp",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_closing_cta_heading",
+            "label": "Banner Heading",
+            "name": "cta_banner_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Centered uppercase heading (H2). Wrap highlighted words in <span>...<\/span> for warm gold color (e.g. Find Your Perfect Tree <span>This Christmas<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. Find Your Perfect Tree <span>This Christmas<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_closing_cta_subtitle",
+            "label": "Banner Subtitle",
+            "name": "cta_banner_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Centered supporting sentence beneath the heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 2,
+            "placeholder": "e.g. Visit our family farm, choose your Monterey Pine and start a tradition you'll come back to every year.",
+            "new_lines": ""
+        },
+        {
+            "key": "field_closing_cta_tab_buttons",
+            "label": "Action Buttons",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_closing_cta_primary_button",
+            "label": "Primary Button (Crimson Pill)",
+            "name": "cta_banner_primary_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Main filled crimson button (e.g. Our Farms).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_closing_cta_primary_icon",
+            "label": "Primary Button Icon (Optional)",
+            "name": "cta_banner_primary_icon",
+            "aria-label": "",
+            "type": "icon_picker",
+            "instructions": "Optional trailing icon inside the primary button (e.g. bi-arrow-right).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "tabs": [
+                "bootstrap_icons",
+                "dashicons",
+                "media_library",
+                "url"
+            ],
+            "return_format": "string",
+            "allow_in_bindings": 0,
+            "library": "all",
+            "default_value": {
+                "type": null,
+                "value": null
+            }
+        },
+        {
+            "key": "field_closing_cta_secondary_button",
+            "label": "Secondary Button (White Outline Pill)",
+            "name": "cta_banner_secondary_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional white-bordered outline button (e.g. Get Directions).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_closing_cta_secondary_icon",
+            "label": "Secondary Button Icon (Optional)",
+            "name": "cta_banner_secondary_icon",
+            "aria-label": "",
+            "type": "icon_picker",
+            "instructions": "Optional trailing icon inside the secondary button (e.g. bi-geo-alt-fill).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "tabs": [
+                "bootstrap_icons",
+                "dashicons",
+                "media_library",
+                "url"
+            ],
+            "return_format": "string",
+            "allow_in_bindings": 0,
+            "library": "all",
+            "default_value": {
+                "type": null,
+                "value": null
+            }
+        },
+        {
+            "key": "field_closing_cta_tab_style",
+            "label": "Banner Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_closing_cta_overlay_opacity",
+            "label": "Dark Overlay Intensity",
+            "name": "cta_banner_overlay_opacity",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Adjust dark forest gradient overlay for text legibility over your photo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "72": "Balanced Dark (72% — Default)",
+                "60": "Lighter Overlay (60%)",
+                "82": "Darker Overlay (82%)",
+                "0": "No Overlay"
+            },
+            "default_value": 72,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_closing_cta_min_height",
+            "label": "Banner Height",
+            "name": "cta_banner_min_height",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Minimum vertical height of the closing CTA banner.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "440": "Standard (440px — Default)",
+                "380": "Compact (380px)",
+                "520": "Tall (520px)"
+            },
+            "default_value": 440,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/closing-cta-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Closing CTA Banner section block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794520329
+}

@@ -1,0 +1,239 @@
+{
+    "key": "group_xmastree_tree_care_callout",
+    "title": "Tree Care Callout Panel",
+    "fields": [
+        {
+            "key": "field_tree_care_callout_tab_content",
+            "label": "Media & Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_tree_care_callout_image",
+            "label": "Callout Photo",
+            "name": "callout_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Landscape photograph displayed inside the rounded callout card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg,jpeg,png,webp",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_tree_care_callout_heading",
+            "label": "Heading",
+            "name": "callout_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase heading (H2). Wrap highlighted words in <span>...<\/span> for crimson color (e.g. Keep Your Real <span>Christmas Tree Fresh<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. Keep Your Real <span>Christmas Tree Fresh<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tree_care_callout_description",
+            "label": "Description",
+            "name": "callout_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Descriptive paragraph copy displayed beside the photo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_tree_care_callout_button",
+            "label": "CTA Button Link",
+            "name": "callout_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional crimson button link (e.g. Tree Care Tips).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_tree_care_callout_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_tree_care_callout_media_position",
+            "label": "Photo Position",
+            "name": "callout_media_position",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose which side displays the photograph on desktop screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Photo on Left (Default)",
+                "right": "Photo on Right (Reversed)"
+            },
+            "default_value": "left",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_tree_care_callout_panel_bg",
+            "label": "Inner Panel Background",
+            "name": "callout_panel_background",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the inner card background color.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFF6F5": "Soft Blush (#FFF6F5 — Default)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#FFFFFF": "White (#FFFFFF)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFF6F5)",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_tree_care_callout_bg_color",
+            "label": "Outer Section Background",
+            "name": "callout_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the outer section background color.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF — Default)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/tree-care-callout"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Tree Care Callout Panel section block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794519836
+}
