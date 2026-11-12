@@ -1,0 +1,206 @@
+{
+    "key": "group_xmastree_monterey_pine_banner",
+    "title": "Monterey Pine Banner",
+    "fields": [
+        {
+            "key": "field_monterey_tab_content",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_monterey_eyebrow",
+            "label": "Eyebrow Text",
+            "name": "monterey_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase kicker text above the title (e.g. GROWN WITH CARE).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "GROWN WITH CARE",
+            "maxlength": "",
+            "placeholder": "GROWN WITH CARE",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_monterey_title",
+            "label": "Banner Title",
+            "name": "monterey_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading text. Line breaks are preserved (e.g. MONTEREY PINE \/ OUR ONLY VARIETY).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_monterey_description",
+            "label": "Banner Description",
+            "name": "monterey_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Descriptive text displayed below the main heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "The classic Christmas tree, grown with care. Rich green needles on our family farm. Fresh, fragrant and full with a natural of festive charm - the perfect tree for your full shape, holiday traditions.",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_monterey_button",
+            "label": "Action Button",
+            "name": "monterey_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Select destination link and label for the white outline button (e.g. DISCOVER OUR TREE).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_monterey_price_text",
+            "label": "Price Callout Text",
+            "name": "monterey_price_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Styled display text on the right side (e.g. Trees from $89).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Trees from $89",
+            "maxlength": "",
+            "placeholder": "Trees from $89",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_monterey_tab_media",
+            "label": "Background Media",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_monterey_background_video",
+            "label": "Background Video",
+            "name": "monterey_background_video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Upload an MP4\/WebM looping background video (recommended: muted background_video.mp4).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4,webm,mov"
+        },
+        {
+            "key": "field_monterey_poster_image",
+            "label": "Poster \/ Fallback Background Image",
+            "name": "monterey_poster_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the poster image for the video (also serves as background image if no video is provided).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,jpg,jpeg,webp",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/monterey-pine-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Monterey Pine Banner custom Gutenberg block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794203500
+}

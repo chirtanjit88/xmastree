@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/blog-listing",
+  "title": "Blog Listing & Featured Story",
+  "description": "Dynamic WordPress blog showcase featuring a Featured Story spotlight, category filter tabs, live search, article grid, numbered pagination, and configurable sidebar widgets.",
+  "category": "xmastree-blocks",
+  "icon": "admin-post",
+  "keywords": [
+    "blog",
+    "posts",
+    "articles",
+    "journal",
+    "stories",
+    "news",
+    "listing",
+    "archive",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "viewScript": "file:./view.js"
+}
+

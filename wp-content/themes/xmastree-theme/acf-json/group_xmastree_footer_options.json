@@ -1,0 +1,273 @@
+{
+    "key": "group_xmastree_footer_options",
+    "title": "Footer",
+    "fields": [
+        {
+            "key": "field_footer_logo",
+            "label": "Footer Logo",
+            "name": "footer_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the footer brand logo (white\/inverted version).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,svg,jpg,jpeg,webp",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_footer_tree_image",
+            "label": "Footer Tree Illustration",
+            "name": "footer_tree_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the illuminated Christmas tree graphic shown on the right side of the footer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,svg,jpg,jpeg,webp",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_footer_tagline",
+            "label": "Footer Tagline",
+            "name": "footer_tagline",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Tagline or short description below the footer logo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6af06cb781b85",
+            "label": "Social Icons",
+            "name": "social_icons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6af06cd481b86",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "icon_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "tabs": [
+                        "dashicons",
+                        "media_library",
+                        "url"
+                    ],
+                    "return_format": "string",
+                    "allow_in_bindings": 0,
+                    "library": "all",
+                    "default_value": {
+                        "type": null,
+                        "value": null
+                    },
+                    "parent_repeater": "field_6af06cb781b85"
+                },
+                {
+                    "key": "field_6af06ce381b87",
+                    "label": "Icon Link",
+                    "name": "icon_link",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6af06cb781b85"
+                }
+            ]
+        },
+        {
+            "key": "field_footer_contact_heading",
+            "label": "Contact Column Heading",
+            "name": "footer_contact_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Heading for Column 4 contact details.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Get In Touch",
+            "placeholder": "Get In Touch",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_footer_phone",
+            "label": "Phone Number",
+            "name": "footer_phone",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Phone number displayed with phone icon.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "(03) 9756 1234",
+            "placeholder": "(03) 9756 1234",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_footer_email",
+            "label": "Email Address",
+            "name": "footer_email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "Contact email address displayed with envelope icon.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Info@Christmastreefarm.Com.Au",
+            "placeholder": "Info@Christmastreefarm.Com.Au",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_footer_hours",
+            "label": "Opening Hours",
+            "name": "footer_hours",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Operating hours displayed with clock icon.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Mon - Sun: 9am - 5pm",
+            "placeholder": "Mon - Sun: 9am - 5pm",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_footer_copyright",
+            "label": "Copyright Text",
+            "name": "footer_copyright",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Copyright notice in the bottom footer bar.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Footer settings and contact information for the XmasTree website.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794141566
+}

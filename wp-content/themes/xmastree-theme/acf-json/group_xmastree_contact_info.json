@@ -1,0 +1,294 @@
+{
+    "key": "group_xmastree_contact_info",
+    "title": "Contact Info Strip",
+    "fields": [
+        {
+            "key": "field_contact_info_tab_content",
+            "label": "Contact Items",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_contact_info_title",
+            "label": "Section Heading (Optional)",
+            "name": "contact_info_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional centered heading above the contact strip. Leave blank to display only the contact items. Wrap highlighted words in <span>...<\/span>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_info_items",
+            "label": "Contact Info Items",
+            "name": "contact_info_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add contact information items (e.g. Email Us, Phone, Opening Hours, Delivery).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_contact_info_item_title",
+            "button_label": "Add Contact Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_contact_info_item_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "icon_picker",
+                    "instructions": "Choose a Bootstrap Icon, Dashicon, or upload an SVG\/PNG icon from the Media Library.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "tabs": [
+                        "bootstrap_icons",
+                        "dashicons",
+                        "media_library",
+                        "url"
+                    ],
+                    "return_format": "string",
+                    "allow_in_bindings": 0,
+                    "library": "all",
+                    "default_value": {
+                        "type": null,
+                        "value": null
+                    },
+                    "parent_repeater": "field_contact_info_items"
+                },
+                {
+                    "key": "field_contact_info_item_title",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Short uppercase label (e.g. EMAIL US, PHONE, OPENING HOURS, DELIVERY).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. EMAIL US",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_contact_info_items"
+                },
+                {
+                    "key": "field_contact_info_item_value",
+                    "label": "Value Text",
+                    "name": "value",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Displayed contact detail (e.g. info@christmastreefarm.com.au, (03) 5977 5577, 9am till 7pm - 7 Days a Week).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. info@christmastreefarm.com.au",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_contact_info_items"
+                },
+                {
+                    "key": "field_contact_info_item_link",
+                    "label": "Optional Link URL",
+                    "name": "link_url",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional link for the value text (e.g. mailto:info@christmastreefarm.com.au, tel:0359775577, or a page URL). Leave blank for plain text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. mailto:info@christmastreefarm.com.au or tel:0359775577",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_contact_info_items"
+                }
+            ]
+        },
+        {
+            "key": "field_contact_info_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_contact_info_style",
+            "label": "Display Style",
+            "name": "contact_info_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose between a flat minimal icon strip or bordered elevated cards.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "minimal": "Minimal Icon Strip (Default — Flat Layout)",
+                "cards": "Bordered Info Cards (contact.html Style)"
+            },
+            "default_value": "minimal",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_contact_info_columns",
+            "label": "Desktop Columns",
+            "name": "contact_info_columns",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Number of contact items per row on desktop screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "4": "4 Columns (Default)",
+                "3": "3 Columns",
+                "2": "2 Columns"
+            },
+            "default_value": 4,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_contact_info_bg_color",
+            "label": "Section Background Color",
+            "name": "contact_info_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the section background color, or keep the default white background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/contact-info"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Contact Info Strip \/ Cards section block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794484452
+}

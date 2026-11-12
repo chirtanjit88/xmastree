@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/care-cards",
+  "title": "Care Step Cards",
+  "description": "Centered two-tone section heading with a responsive grid of photo-topped icon cards and an optional bold crimson bottom note.",
+  "category": "xmastree-blocks",
+  "icon": "grid-view",
+  "keywords": [
+    "care",
+    "cards",
+    "steps",
+    "happier tree",
+    "tree care",
+    "tips",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

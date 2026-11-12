@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/farm-moments",
+  "title": "Farm Moments Carousel",
+  "description": "Centered two-tone section heading with a multi-item Owl Carousel photo gallery and side circular navigation arrows.",
+  "category": "xmastree-blocks",
+  "icon": "images-alt2",
+  "keywords": [
+    "moments",
+    "carousel",
+    "slider",
+    "gallery",
+    "photos",
+    "our farms",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

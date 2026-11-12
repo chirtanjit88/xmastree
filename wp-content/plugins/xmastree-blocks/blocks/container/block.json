@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "xmastree/container",
+  "version": "1.0.0",
+  "title": "Container",
+  "description": "Responsive layout container wrapping inner blocks in a selectable theme container (.container, .container-fluid, .stand-container) or custom max-width.",
+  "category": "xmastree-blocks",
+  "icon": "layout",
+  "keywords": [
+    "container",
+    "wrapper",
+    "layout",
+    "section",
+    "max-width",
+    "fluid",
+    "xmastree"
+  ],
+  "textdomain": "xmastree-blocks",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "containerType": {
+      "type": "string",
+      "default": "container",
+      "enum": [
+        "container",
+        "container-fluid",
+        "stand-container",
+        "custom"
+      ]
+    },
+    "customMaxWidth": {
+      "type": "number",
+      "default": 1200
+    },
+    "tagName": {
+      "type": "string",
+      "default": "div",
+      "enum": [
+        "div",
+        "section"
+      ]
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "className": true,
+    "html": false,
+    "layout": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "render": "file:./render.php"
+}
+

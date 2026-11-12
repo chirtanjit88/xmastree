@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/contact-info",
+  "title": "Contact Info Strip",
+  "description": "Responsive multi-column contact information bar (email, phone, opening hours, delivery) supporting both minimal icon strip and bordered card layouts.",
+  "category": "xmastree-blocks",
+  "icon": "phone",
+  "keywords": [
+    "contact",
+    "email",
+    "phone",
+    "hours",
+    "delivery",
+    "info",
+    "cards",
+    "strip",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

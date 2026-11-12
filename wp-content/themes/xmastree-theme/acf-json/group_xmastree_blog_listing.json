@@ -1,0 +1,1356 @@
+{
+    "key": "group_xmastree_blog_listing",
+    "title": "Blog Listing & Featured Story",
+    "fields": [
+        {
+            "key": "field_blog_listing_tab_query",
+            "label": "Query & Featured",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_blog_posts_per_page",
+            "label": "Posts Per Page",
+            "name": "blog_posts_per_page",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Number of article cards displayed per page in the main blog grid.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 6,
+            "min": 1,
+            "max": 24,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_columns",
+            "label": "Grid Columns",
+            "name": "blog_columns",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Number of article cards per row on desktop screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "2 Columns (Default — With Sidebar)",
+                "3": "3 Columns (Recommended Full Width)",
+                "1": "1 Column"
+            },
+            "default_value": 2,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_blog_orderby",
+            "label": "Order Articles By",
+            "name": "blog_orderby",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Sort order for articles displayed in the listing.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "date": "Published Date (Default)",
+                "modified": "Last Updated Date",
+                "title": "Article Title",
+                "comment_count": "Most Commented"
+            },
+            "default_value": "date",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_blog_order",
+            "label": "Sort Direction",
+            "name": "blog_order",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Ascending or descending order.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "DESC": "Newest \/ Descending (Default)",
+                "ASC": "Oldest \/ Ascending"
+            },
+            "default_value": "DESC",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_blog_include_categories",
+            "label": "Limit to Categories",
+            "name": "blog_include_categories",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Optional: restrict this listing to selected WordPress categories. Leave empty to show all published posts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_blog_hide_uncategorized",
+            "label": "Hide \"Uncategorized\" Category",
+            "name": "blog_hide_uncategorized",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Omit the default WordPress \"Uncategorized\" term from badges, filter tabs, and sidebar lists.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_show_featured",
+            "label": "Show Featured Story Spotlight",
+            "name": "blog_show_featured",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the top horizontal Featured Story card above the filter bar on unfiltered page 1.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_featured_source",
+            "label": "Featured Story Source",
+            "name": "blog_featured_source",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose whether the Featured Story is pulled automatically (sticky\/latest post) or chosen manually.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_featured",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "auto": "Automatic (Latest Sticky Post, or Most Recent Post)",
+                "manual": "Manually Select Featured Post"
+            },
+            "default_value": "auto",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_blog_featured_post",
+            "label": "Select Featured Post",
+            "name": "blog_featured_post",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Pick a specific published blog post to display in the top Featured Story spotlight card.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_featured",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_featured_source",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": [],
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_blog_exclude_featured",
+            "label": "Exclude Featured Post from Main Grid",
+            "name": "blog_exclude_featured",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Prevent the featured spotlight article from appearing again in the grid below.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_featured",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_show_featured_author",
+            "label": "Show Author on Featured Story",
+            "name": "blog_show_featured_author",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the author avatar and display name in the Featured Story card footer.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_featured",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_featured_pill",
+            "label": "Featured Badge Label",
+            "name": "blog_featured_pill",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional custom label for the top-left featured pill (defaults to \"Featured Story\").",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_featured",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "FEATURED STORY",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_featured_cta_label",
+            "label": "Featured Button Label",
+            "name": "blog_featured_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional custom button text on the featured spotlight card (defaults to \"Read Full Story\").",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_featured",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "READ FULL STORY",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_listing_tab_cards",
+            "label": "Filter, Cards & Pagination",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_blog_show_filter_bar",
+            "label": "Show Filter & Search Bar",
+            "name": "blog_show_filter_bar",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the category tabs and search input row above the article grid.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_show_category_tabs",
+            "label": "Show Category Filter Tabs",
+            "name": "blog_show_category_tabs",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display category filter buttons along the left side of the filter bar.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_filter_categories",
+            "label": "Filter Tab Categories",
+            "name": "blog_filter_categories",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Optional: select specific categories for the top filter tabs. Leave empty to display all active categories.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_show_category_tabs",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_blog_all_tab_label",
+            "label": "\"All\" Filter Tab Label",
+            "name": "blog_all_tab_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional custom label for the default reset filter button (defaults to \"All Stories\").",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_show_category_tabs",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "ALL STORIES",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_show_search_bar",
+            "label": "Show Top Search Box",
+            "name": "blog_show_search_bar",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the article search input inside the filter bar.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_search_placeholder",
+            "label": "Search Placeholder Text",
+            "name": "blog_search_placeholder",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional custom placeholder for the main search bar (defaults to \"Search articles...\").",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_show_search_bar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Search articles...",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_search_icon",
+            "label": "Custom Search Icon Image",
+            "name": "blog_search_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Optional custom icon image displayed inside the top search box (uses vector icon if unset).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_show_search_bar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,svg,jpg,jpeg,webp",
+            "allow_in_bindings": 0,
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_blog_show_excerpt",
+            "label": "Show Article Excerpts",
+            "name": "blog_show_excerpt",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display excerpt text inside featured and grid article cards.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_excerpt_length",
+            "label": "Excerpt Word Limit",
+            "name": "blog_excerpt_length",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Maximum word count trimmed for grid card excerpts.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_excerpt",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 24,
+            "min": 5,
+            "max": 80,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": "words"
+        },
+        {
+            "key": "field_blog_show_read_time",
+            "label": "Show Estimated Read Time",
+            "name": "blog_show_read_time",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display computed reading time alongside the publication date.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_card_cta_label",
+            "label": "Card Read More Label",
+            "name": "blog_card_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional custom link label in grid card footers (defaults to \"Read More\").",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "READ MORE",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_show_pagination",
+            "label": "Show Numbered Pagination",
+            "name": "blog_show_pagination",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display pagination controls beneath the article grid when multiple pages exist.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_empty_message",
+            "label": "Empty Search \/ Filter Message",
+            "name": "blog_empty_message",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional message shown when search or taxonomy filters match zero posts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "No articles found matching your selection.",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_listing_tab_sidebar",
+            "label": "Sidebar & Promo Card",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_blog_show_sidebar",
+            "label": "Show Right Blog Sidebar",
+            "name": "blog_show_sidebar",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the right-hand blog sidebar (col-lg-4). Disable for a full-width article grid.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_sidebar_show_search",
+            "label": "Show Sidebar Search Widget",
+            "name": "blog_sidebar_show_search",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Include the Search widget at the top of the blog sidebar.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_sidebar_search_title",
+            "label": "Sidebar Search Title",
+            "name": "blog_sidebar_search_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional heading for the sidebar search widget (defaults to \"Search Articles\").",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_sidebar_show_search",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Search Articles",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_sidebar_search_placeholder",
+            "label": "Sidebar Search Placeholder",
+            "name": "blog_sidebar_search_placeholder",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional placeholder inside the sidebar search input (defaults to \"Search farm blog...\").",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_sidebar_show_search",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Search farm blog...",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_sidebar_show_categories",
+            "label": "Show Categories Widget",
+            "name": "blog_sidebar_show_categories",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display dynamic WordPress categories with article counts in the sidebar.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_sidebar_cats_title",
+            "label": "Categories Widget Title",
+            "name": "blog_sidebar_cats_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional heading for the sidebar category list (defaults to \"Farm Categories\").",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_sidebar_show_categories",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Farm Categories",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_sidebar_show_recent",
+            "label": "Show Recent Stories Widget",
+            "name": "blog_sidebar_show_recent",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the latest posts thumbnail list in the sidebar.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_sidebar_recent_title",
+            "label": "Recent Stories Title",
+            "name": "blog_sidebar_recent_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional heading for the recent articles widget (defaults to \"Recent Stories\").",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_sidebar_show_recent",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Recent Stories",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_sidebar_recent_count",
+            "label": "Recent Stories Count",
+            "name": "blog_sidebar_recent_count",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Number of recent posts displayed in the sidebar widget.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_sidebar_show_recent",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 1,
+            "max": 10,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_promo_badge",
+            "label": "Sidebar Promo Card Badge",
+            "name": "blog_promo_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional crimson pill label inside the dark green promo card (card renders only when configured).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "HOLIDAY SHOP",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_promo_title",
+            "label": "Sidebar Promo Card Title",
+            "name": "blog_promo_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional heading for the sidebar promotional card.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Visit Ma's Corner",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_promo_description",
+            "label": "Sidebar Promo Card Description",
+            "name": "blog_promo_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optional short description inside the sidebar promotional card.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_blog_promo_button",
+            "label": "Sidebar Promo Card Button",
+            "name": "blog_promo_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional CTA link and label for the sidebar promotional card.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_blog_sidebar_show_tags",
+            "label": "Show Popular Tags Widget",
+            "name": "blog_sidebar_show_tags",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display popular WordPress post tags as clickable filter pills in the sidebar.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_blog_sidebar_tags_title",
+            "label": "Popular Tags Title",
+            "name": "blog_sidebar_tags_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional heading for the tags cloud widget (defaults to \"Popular Tags\").",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_sidebar_show_tags",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Popular Tags",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_sidebar_tags_limit",
+            "label": "Max Tags to Display",
+            "name": "blog_sidebar_tags_limit",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Maximum number of popular tags displayed in the sidebar tag cloud.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_blog_show_sidebar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_blog_sidebar_show_tags",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 12,
+            "min": 1,
+            "max": 40,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_listing_tab_style",
+            "label": "Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_blog_background_color",
+            "label": "Section Background Color",
+            "name": "blog_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the default white (#FFFFFF) section backdrop.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/blog-listing"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Blog listing, featured spotlight, filtering, search, pagination, and sidebar widget field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794468211
+}

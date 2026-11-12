@@ -1,0 +1,356 @@
+{
+    "key": "group_xmastree_blog_details_options",
+    "title": "Blog Details Options",
+    "fields": [
+        {
+            "key": "field_bd_tab_layout",
+            "label": "Article & Related Layout",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_bd_show_sidebar",
+            "label": "Show Sidebar",
+            "name": "blog_details_show_sidebar",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the right sidebar (Search, Categories, Recent Stories, Promo Card, Popular Tags) on single blog articles.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_bd_show_author_bio",
+            "label": "Show Author Bio Box",
+            "name": "blog_details_show_author_bio",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the author profile card at the bottom of single articles using the author's WordPress User Profile.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_bd_show_post_nav",
+            "label": "Show Prev / Next Article Nav",
+            "name": "blog_details_show_post_nav",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display Previous and Next post navigation cards below the author box.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_bd_show_related",
+            "label": "Show Related Articles Section",
+            "name": "blog_details_show_related",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the related articles grid below the article body.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_bd_related_heading",
+            "label": "Related Section Heading",
+            "name": "blog_details_related_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional heading HTML (wrap highlighted words in &lt;span&gt;...&lt;/span&gt;, e.g. YOU MAY ALSO &lt;span&gt;ENJOY&lt;/span&gt;). Leave empty for default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_bd_show_related",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "44",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_bd_related_count",
+            "label": "Related Posts Count",
+            "name": "blog_details_related_count",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Number of related articles to show (1 to 6).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_bd_show_related",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "22",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 1,
+            "max": 6,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_bd_tab_promo",
+            "label": "Sidebar Promo Card",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_bd_promo_badge",
+            "label": "Promo Badge",
+            "name": "blog_details_promo_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional pill label above the promo card title. Leave all Promo Card fields blank to hide this card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_bd_promo_title",
+            "label": "Promo Title",
+            "name": "blog_details_promo_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_bd_promo_description",
+            "label": "Promo Description",
+            "name": "blog_details_promo_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_bd_promo_button",
+            "label": "Promo Button",
+            "name": "blog_details_promo_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_bd_tab_moments",
+            "label": "Bottom Moments Carousel",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_bd_moments_title",
+            "label": "Moments Carousel Heading",
+            "name": "blog_details_moments_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional section heading (wrap crimson words in &lt;span&gt;...&lt;/span&gt;, e.g. MOMENTS FROM &lt;span&gt;THE FARM&lt;/span&gt;).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_bd_moments_gallery",
+            "label": "Moments Gallery Photos",
+            "name": "blog_details_moments_gallery",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "Upload carousel photos shown below Related Articles. Carousel is hidden unless photos are selected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Optional settings for Single Blog Post details template.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794505000
+}
+

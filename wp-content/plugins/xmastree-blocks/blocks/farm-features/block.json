@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/farm-features",
+  "title": "Farm Features Grid",
+  "description": "Centered section heading with a responsive multi-column grid of crimson-bordered feature cards (icon, uppercase title, and description).",
+  "category": "xmastree-blocks",
+  "icon": "grid-view",
+  "keywords": [
+    "farm",
+    "features",
+    "cards",
+    "highlights",
+    "more than just",
+    "our farms",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

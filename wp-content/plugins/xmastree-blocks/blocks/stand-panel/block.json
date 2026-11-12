@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/stand-panel",
+  "title": "Stand Promo Panel",
+  "description": "Full-width dark green rounded feature panel with two-tone heading, supporting copy, crimson pill CTA button, and a white rounded image card.",
+  "category": "xmastree-blocks",
+  "icon": "align-pull-right",
+  "keywords": [
+    "stand",
+    "promo",
+    "panel",
+    "callout",
+    "tree stand",
+    "tree care",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

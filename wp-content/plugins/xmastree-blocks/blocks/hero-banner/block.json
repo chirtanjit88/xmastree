@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/hero-banner",
+  "title": "Hero Banner",
+  "description": "Christmas Tree Farm homepage hero banner with festive badge, heading, subtitle, CTA button, and snowy divider.",
+  "category": "xmastree-blocks",
+  "icon": "cover-image",
+  "keywords": [
+    "hero",
+    "banner",
+    "christmas",
+    "xmastree",
+    "farm"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

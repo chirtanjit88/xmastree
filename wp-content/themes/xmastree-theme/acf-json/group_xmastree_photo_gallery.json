@@ -1,0 +1,248 @@
+{
+    "key": "group_xmastree_photo_gallery",
+    "title": "Photo Gallery (Lightbox)",
+    "fields": [
+        {
+            "key": "field_photo_gallery_tab_content",
+            "label": "Gallery Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_photo_gallery_title",
+            "label": "Section Heading (Optional)",
+            "name": "photo_gallery_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Centered uppercase heading (H2). Use <br> for line breaks and wrap highlighted words in <span>...<\/span> (e.g. MOMENTS FROM <span>OUR FARM GALLERY<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. MOMENTS FROM <span>OUR FARM<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_photo_gallery_subtitle",
+            "label": "Section Subtitle (Optional)",
+            "name": "photo_gallery_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optional short description displayed below the heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_photo_gallery_images",
+            "label": "Gallery Images",
+            "name": "photo_gallery_images",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "Select and reorder photos for the gallery grid. Clicking any photo opens a full-screen lightbox viewer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": 0,
+            "max": 0,
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": "png,jpg,jpeg,webp",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_photo_gallery_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_photo_gallery_columns",
+            "label": "Desktop Columns",
+            "name": "photo_gallery_columns",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Number of photos per row on desktop screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "4": "4 Columns (Default)",
+                "3": "3 Columns",
+                "2": "2 Columns"
+            },
+            "default_value": 4,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_photo_gallery_aspect_ratio",
+            "label": "Thumbnail Aspect Ratio",
+            "name": "photo_gallery_aspect_ratio",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Consistent crop ratio applied to gallery thumbnails.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "4x3": "Landscape 4:3 (Default)",
+                "1x1": "Square 1:1",
+                "3x4": "Portrait 3:4",
+                "16x9": "Widescreen 16:9"
+            },
+            "default_value": "4x3",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_photo_gallery_show_captions",
+            "label": "Show Captions on Grid",
+            "name": "photo_gallery_show_captions",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display image captions below grid thumbnails (captions always appear in the lightbox popup).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show captions under gallery thumbnails",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_photo_gallery_bg_color",
+            "label": "Section Background Color",
+            "name": "photo_gallery_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the section background color, or keep the default white background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/photo-gallery"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Photo Gallery grid block with full-screen lightbox viewer.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794487202
+}

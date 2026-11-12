@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/video-spotlight",
+  "title": "Christmas Magic / Video Spotlight",
+  "description": "Two-column story section with two-tone serif heading, rich copy, crimson pill CTA button, and rounded video cover card that opens an autoplaying popup modal for uploaded, YouTube, or Vimeo videos.",
+  "category": "xmastree-blocks",
+  "icon": "video-alt3",
+  "keywords": [
+    "mas corner",
+    "christmas magic",
+    "video",
+    "popup",
+    "modal",
+    "youtube",
+    "vimeo",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js"
+}
+

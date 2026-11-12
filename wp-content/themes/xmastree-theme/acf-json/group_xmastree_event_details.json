@@ -1,0 +1,148 @@
+{
+    "key": "group_xmastree_event_details",
+    "title": "Event Details",
+    "fields": [
+        {
+            "key": "field_event_start_date",
+            "label": "Event Start Date",
+            "name": "event_start_date",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "Select the event date shown in the left date box and used for sorting and the Select Date filter.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "Y-m-d",
+            "first_day": 1,
+            "default_to_current_date": 0,
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_event_end_date",
+            "label": "Event End Date (Optional)",
+            "name": "event_end_date",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "Optional end date for multi-day farm events.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "Y-m-d",
+            "first_day": 1,
+            "default_to_current_date": 0,
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_event_time_label",
+            "label": "Event Time",
+            "name": "event_time_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional schedule hours shown on the Event Details page (e.g. 10:00 AM – 4:00 PM).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_event_location",
+            "label": "Event Location",
+            "name": "event_location",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional farm location (e.g. Somerville Farm or Mornington Peninsula Farm).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_event_short_description",
+            "label": "Card Short Description (Optional)",
+            "name": "event_short_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Short summary displayed inside the event card. Leave empty to use the post Excerpt or trimmed content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_event_cta_link",
+            "label": "Custom Card Action Link (Optional)",
+            "name": "event_cta_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional custom URL and label for this event card button (for example, linking directly to the Contact page or a booking form). Leave empty to link to this Event's detail page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "xmastree_event"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Metadata fields for XmasTree Event posts.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794482392
+}

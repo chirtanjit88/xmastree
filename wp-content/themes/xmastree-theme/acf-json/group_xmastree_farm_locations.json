@@ -1,0 +1,259 @@
+{
+    "key": "group_xmastree_farm_locations",
+    "title": "Farm Locations",
+    "fields": [
+        {
+            "key": "field_farm_locations_tab_content",
+            "label": "Locations Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_farm_locations_title",
+            "label": "Section Heading",
+            "name": "farm_locations_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Centered uppercase heading (H2). Use <br> for line breaks and wrap highlighted words in <span>...<\/span> (e.g. THREE BEAUTIFUL LOCATIONS.<br><span>ONE CHRISTMAS TRADITION.<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "THREE BEAUTIFUL LOCATIONS.<br><span>ONE CHRISTMAS TRADITION.<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_farm_locations_items",
+            "label": "Farm Locations",
+            "name": "farm_locations_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add each farm location card displayed in the grid (photo, location name, opening hours, and directions link).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_farm_loc_item_name",
+            "button_label": "Add Location",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_farm_loc_item_image",
+                    "label": "Location Photo",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Upload the farm location photo displayed at the top of the card.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,jpg,jpeg,webp",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_farm_locations_items"
+                },
+                {
+                    "key": "field_farm_loc_item_name",
+                    "label": "Location Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Uppercase farm location heading displayed next to the map pin icon (e.g. SOMERVILLE CHRISTMAS TREE FARM).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. SOMERVILLE CHRISTMAS TREE FARM",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_farm_locations_items"
+                },
+                {
+                    "key": "field_farm_loc_item_hours",
+                    "label": "Opening Hours",
+                    "name": "hours",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Opening hours text displayed next to the clock icon (e.g. 9am till 7pm - 7 Days a Week).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. 9am till 7pm - 7 Days a Week",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_farm_locations_items"
+                },
+                {
+                    "key": "field_farm_loc_item_link",
+                    "label": "Directions Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Select the Google Maps URL, link label (e.g. GET DIRECTION), and target window.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0,
+                    "parent_repeater": "field_farm_locations_items"
+                }
+            ]
+        },
+        {
+            "key": "field_farm_locations_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_farm_locations_columns",
+            "label": "Desktop Columns",
+            "name": "farm_locations_columns",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Number of location cards per row on desktop screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "3": "3 Columns (Default — Our Farms Style)",
+                "4": "4 Columns",
+                "2": "2 Columns"
+            },
+            "default_value": 3,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_farm_locations_bg_color",
+            "label": "Section Background Color",
+            "name": "farm_locations_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the section background color, or keep the default white background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/farm-locations"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Our Farms locations grid section block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794294612
+}

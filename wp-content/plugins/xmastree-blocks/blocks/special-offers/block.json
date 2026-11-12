@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/special-offers",
+  "title": "Special Christmas Offers",
+  "description": "Centered two-tone heading and intro subtitle with a responsive grid of offer cards featuring a top image, icon, title, description, and crimson offer footer label.",
+  "category": "xmastree-blocks",
+  "icon": "awards",
+  "keywords": [
+    "special offers",
+    "christmas offers",
+    "mas corner",
+    "cards",
+    "promotions",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}

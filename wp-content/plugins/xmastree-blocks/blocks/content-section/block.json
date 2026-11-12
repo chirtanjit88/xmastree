@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/content-section",
+  "title": "Content Section",
+  "description": "Versatile inner page content block supporting split image/content layouts, feature badges grid, CTA buttons, and panoramic background banner sections.",
+  "category": "xmastree-blocks",
+  "icon": "columns",
+  "keywords": [
+    "about",
+    "content",
+    "split",
+    "section",
+    "tradition",
+    "features",
+    "badges",
+    "banner",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

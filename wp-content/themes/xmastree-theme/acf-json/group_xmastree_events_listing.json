@@ -1,0 +1,591 @@
+{
+    "key": "group_xmastree_events_listing",
+    "title": "Events Listing Block",
+    "fields": [
+        {
+            "key": "field_events_tab_query",
+            "label": "Query & Cards",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_events_per_page",
+            "label": "Events Per Page",
+            "name": "events_per_page",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Maximum number of event cards displayed per page before pagination.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": 1,
+            "max": 24,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_events_orderby",
+            "label": "Order Events By",
+            "name": "events_orderby",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose how event cards are sorted.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "event_start_date": "Event Start Date (Default)",
+                "date": "Published Date",
+                "menu_order": "Manual Page Order",
+                "title": "Event Title"
+            },
+            "default_value": "event_start_date",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_events_order",
+            "label": "Sort Direction",
+            "name": "events_order",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Ascending shows upcoming\/earliest dates first.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "ASC": "Ascending \/ Earliest First (Default)",
+                "DESC": "Descending \/ Latest First"
+            },
+            "default_value": "ASC",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_events_hide_past",
+            "label": "Hide Past Events",
+            "name": "events_hide_past",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Automatically hide events whose end date (or start date) is earlier than today.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Hide Past",
+            "ui_off_text": "Show All"
+        },
+        {
+            "key": "field_events_include_categories",
+            "label": "Limit to Event Categories",
+            "name": "events_include_categories",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Optional: restrict this block to selected Event Categories. Leave empty for all.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "event_category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_events_cta_label",
+            "label": "Card Link Label Override",
+            "name": "events_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional button label on event cards (defaults to VIEW DETAILS).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_events_empty_message",
+            "label": "Empty State Message",
+            "name": "events_empty_message",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional message shown when search or filters return no matching events.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_events_tab_filters",
+            "label": "Search, Filters & Pagination",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_events_show_filter_bar",
+            "label": "Show Filter & Search Bar",
+            "name": "events_show_filter_bar",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_events_show_search",
+            "label": "Show Search Input",
+            "name": "events_show_search",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_events_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_events_show_category_tabs",
+            "label": "Show Category Tabs",
+            "name": "events_show_category_tabs",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_events_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_events_show_date_filter",
+            "label": "Show Select Date Filter",
+            "name": "events_show_date_filter",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_events_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_events_show_pagination",
+            "label": "Show Numbered Pagination",
+            "name": "events_show_pagination",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_events_filter_categories",
+            "label": "Filter Tab Categories",
+            "name": "events_filter_categories",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Optional subset and order for filter tabs. Leave empty to show all populated Event Categories.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_events_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_events_show_category_tabs",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "event_category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_events_all_tab_label",
+            "label": "\"All Events\" Tab Label",
+            "name": "events_all_tab_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional label for the reset tab (defaults to ALL EVENTS).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_events_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_events_search_placeholder",
+            "label": "Search Placeholder",
+            "name": "events_search_placeholder",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional placeholder inside search input (defaults to Search for events).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_events_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_events_show_search",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_events_date_filter_label",
+            "label": "Date Filter Label",
+            "name": "events_date_filter_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional default label on the date filter button (defaults to Select Date).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_events_show_filter_bar",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_events_show_date_filter",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_events_search_icon",
+            "label": "Custom Search Icon",
+            "name": "events_search_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Optional custom search icon image from Media Library. Uses Bootstrap search icon if empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_events_calendar_icon",
+            "label": "Custom Calendar Icon",
+            "name": "events_calendar_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Optional custom calendar icon image for event date boxes & Select Date button. Uses Bootstrap calendar icon if empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_events_tab_style",
+            "label": "Section Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_events_bg_color",
+            "label": "Section Background Color",
+            "name": "events_background_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Optional background color override (defaults to #FFFFFF).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/events-listing"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Block settings for the Events Listing block.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794482213
+}

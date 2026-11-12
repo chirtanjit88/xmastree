@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/faqs",
+  "title": "Visitor FAQs",
+  "description": "Visitor FAQs section with centered highlighted title and Bootstrap 5 accordion list.",
+  "category": "xmastree-blocks",
+  "icon": "editor-help",
+  "keywords": [
+    "faq",
+    "faqs",
+    "questions",
+    "accordion",
+    "visitor",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

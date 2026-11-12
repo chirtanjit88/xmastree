@@ -1,0 +1,152 @@
+{
+    "key": "group_xmastree_moments",
+    "title": "Moments From The Farm",
+    "fields": [
+        {
+            "key": "field_moments_tab_content",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_moments_title",
+            "label": "Section Title",
+            "name": "moments_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Section heading. Wrap words in <span>...<\/span> to display on a new line in crimson (e.g. MOMENTS FROM <span>THE FARM<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "MOMENTS FROM <span>THE FARM<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_moments_description",
+            "label": "Section Description",
+            "name": "moments_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Short introductory text displayed below the heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_moments_button",
+            "label": "Action Button",
+            "name": "moments_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Select the destination page URL, button label (e.g. VIEW GALLERY), and target window.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_moments_tab_gallery",
+            "label": "Gallery Mosaic",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_moments_gallery",
+            "label": "Mosaic Photos (Up to 6 Images)",
+            "name": "moments_gallery",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "Select up to 6 photos for the mosaic layout: Image 1 = left tall photo; Images 2-4 = top row; Images 5-6 = bottom row (wide + narrow). Drag to reorder.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": 0,
+            "max": 6,
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": "png,jpg,jpeg,webp",
+            "allow_in_bindings": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/moments-gallery"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Moments From The Farm 6-image mosaic gallery block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794209900
+}

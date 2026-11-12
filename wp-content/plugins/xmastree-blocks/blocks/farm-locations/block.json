@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/farm-locations",
+  "title": "Farm Locations",
+  "description": "Centered two-tone section heading with a responsive multi-column grid of farm location cards (photo, pin-badged location name, opening hours, and directions link).",
+  "category": "xmastree-blocks",
+  "icon": "location-alt",
+  "keywords": [
+    "farm",
+    "locations",
+    "three beautiful locations",
+    "directions",
+    "hours",
+    "map",
+    "our farms",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

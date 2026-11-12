@@ -1,0 +1,498 @@
+{
+    "key": "group_xmastree_testimonials",
+    "title": "Testimonials Carousel",
+    "fields": [
+        {
+            "key": "field_testimonials_tab_content",
+            "label": "Manual Testimonials",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_testimonials_title",
+            "label": "Section Title",
+            "name": "testimonials_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Centered heading text. Wrap words in <span>...<\/span> for crimson highlight (e.g. WHAT OUR <span>VISITORS SAY<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "WHAT OUR <span>VISITORS SAY<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_testimonials_items",
+            "label": "Testimonials",
+            "name": "testimonials_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add visitor review cards manually. If left empty and Google Reviews are configured in the Google Reviews tab, Google Reviews will load automatically.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_testimonial_author_name",
+            "button_label": "Add Testimonial",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_testimonial_author_avatar",
+                    "label": "Author Photo",
+                    "name": "author_avatar",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Circular author photo displayed beside the reviewer's name.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,jpg,jpeg,webp",
+                    "allow_in_bindings": 0,
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_testimonials_items"
+                },
+                {
+                    "key": "field_testimonial_author_name",
+                    "label": "Author Name",
+                    "name": "author_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Reviewer's display name.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. Sarah M",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_testimonials_items"
+                },
+                {
+                    "key": "field_testimonial_author_location",
+                    "label": "Author Location",
+                    "name": "author_location",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Suburb, city, or region displayed below the reviewer's name.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. Melbourne, VIC",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_testimonials_items"
+                },
+                {
+                    "key": "field_testimonial_rating",
+                    "label": "Star Rating",
+                    "name": "rating",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Select the star rating out of 5 (supports half stars). Leave blank to hide stars.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "5": "5 Stars",
+                        "4.5": "4.5 Stars",
+                        "4": "4 Stars",
+                        "3.5": "3.5 Stars",
+                        "3": "3 Stars",
+                        "2.5": "2.5 Stars",
+                        "2": "2 Stars",
+                        "1.5": "1.5 Stars",
+                        "1": "1 Star",
+                        "0.5": "0.5 Stars"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 1,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_testimonials_items",
+                    "create_options": 0,
+                    "save_options": 0
+                },
+                {
+                    "key": "field_testimonial_quote_title",
+                    "label": "Review Headline",
+                    "name": "quote_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Bold headline quote shown above the review text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. \"The best Christmas tradition!\"",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_testimonials_items"
+                },
+                {
+                    "key": "field_testimonial_quote_content",
+                    "label": "Review Quote",
+                    "name": "quote_content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Full testimonial review text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_testimonials_items"
+                }
+            ]
+        },
+        {
+            "key": "field_testimonials_tab_google",
+            "label": "Google Reviews",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_testimonials_google_mode",
+            "label": "Google Reviews Mode",
+            "name": "google_source_mode",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose how Google Reviews interact with manual testimonials.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "fallback": "Pull Google Reviews if manual testimonials are empty (Default)",
+                "merge": "Combine manual testimonials + Google Reviews",
+                "google_only": "Show Google Reviews only (ignore manual entries)",
+                "disabled": "Manual testimonials only (disable Google Reviews)"
+            },
+            "default_value": "fallback",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_testimonials_google_place_id",
+            "label": "Google Place ID",
+            "name": "google_place_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter your Google Business Place ID (e.g. ChIJ...). Find it via Google's Place ID Finder.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_testimonials_google_mode",
+                        "operator": "!=",
+                        "value": "disabled"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "ChIJ...",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_testimonials_google_api_key",
+            "label": "Google Places API Key",
+            "name": "google_api_key",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Google Cloud API key with Places API (or Places API New) enabled. Requests run server-side and are cached.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_testimonials_google_mode",
+                        "operator": "!=",
+                        "value": "disabled"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "AIza...",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_testimonials_google_min_rating",
+            "label": "Minimum Star Rating Filter",
+            "name": "google_min_rating",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally show only Google Reviews at or above this rating.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_testimonials_google_mode",
+                        "operator": "!=",
+                        "value": "disabled"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "5": "5 Stars Only",
+                "4": "4 Stars & Up",
+                "3": "3 Stars & Up",
+                "2": "2 Stars & Up",
+                "1": "1 Star & Up"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_testimonials_google_max_reviews",
+            "label": "Maximum Google Reviews",
+            "name": "google_max_reviews",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Maximum number of Google Reviews to display (Google Places API returns up to 5 reviews). Leave blank for all.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_testimonials_google_mode",
+                        "operator": "!=",
+                        "value": "disabled"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 5,
+            "allow_in_bindings": 0,
+            "placeholder": 5,
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_testimonials_google_sort",
+            "label": "Sort Google Reviews By",
+            "name": "google_sort_by",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose whether to prioritize most relevant reviews or newest reviews first.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_testimonials_google_mode",
+                        "operator": "!=",
+                        "value": "disabled"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "most_relevant": "Most Relevant",
+                "newest": "Newest First"
+            },
+            "default_value": "most_relevant",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_testimonials_google_cache",
+            "label": "Cache Duration",
+            "name": "google_cache_duration",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "How long fetched Google Reviews are cached locally in WordPress before refreshing.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_testimonials_google_mode",
+                        "operator": "!=",
+                        "value": "disabled"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "3600": "1 Hour",
+                "21600": "6 Hours",
+                "43200": "12 Hours (Recommended)",
+                "86400": "24 Hours"
+            },
+            "default_value": 43200,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/testimonials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Testimonials Carousel custom Gutenberg block field group with manual & Google Reviews support.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794206963
+}

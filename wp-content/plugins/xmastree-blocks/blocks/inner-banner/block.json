@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/inner-banner",
+  "title": "Inner Banner",
+  "description": "Full-bleed inner page banner with dynamic background photo, dark overlay, Frijole display heading, and Rye subtitle.",
+  "category": "xmastree-blocks",
+  "icon": "cover-image",
+  "keywords": [
+    "inner",
+    "banner",
+    "page",
+    "header",
+    "hero",
+    "about",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

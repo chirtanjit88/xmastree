@@ -1,0 +1,106 @@
+/* Video Spotlight Popup Modal & Preview Surface */
+.mas-video-wrapper {
+	background-color: #001C0E;
+}
+
+.mas-video-wrapper.mas-video-clickable {
+	cursor: pointer;
+}
+
+.mas-video-wrapper .mas-video-preview-poster {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	pointer-events: none;
+}
+
+/* Modal Lightbox Portal */
+.xmastree-video-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 16px;
+}
+
+.xmastree-video-modal[hidden] {
+	display: none;
+}
+
+.xmastree-video-modal__backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 12, 6, 0.86);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+}
+
+.xmastree-video-modal__dialog {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	max-width: 960px;
+}
+
+.xmastree-video-modal__close {
+	position: absolute;
+	top: -50px;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1.5px solid rgba(255, 255, 255, 0.85);
+	background-color: #AB0030;
+	color: #FFFFFF;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	line-height: 1;
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+	z-index: 2;
+}
+
+.xmastree-video-modal__close:hover,
+.xmastree-video-modal__close:focus-visible {
+	background-color: #850025;
+	transform: scale(1.06);
+	outline: none;
+}
+
+.xmastree-video-modal__stage {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	max-height: calc(100vh - 110px);
+	background-color: #000000;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+.xmastree-video-modal__stage iframe,
+.xmastree-video-modal__stage video {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+	object-fit: contain;
+	background-color: #000000;
+}
+
+@media (max-height: 520px) {
+	.xmastree-video-modal__close {
+		top: 10px;
+		right: 10px;
+	}
+
+	.xmastree-video-modal__stage {
+		max-height: calc(100vh - 40px);
+	}
+}
+

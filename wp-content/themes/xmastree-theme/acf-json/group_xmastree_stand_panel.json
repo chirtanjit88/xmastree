@@ -1,0 +1,257 @@
+{
+    "key": "group_xmastree_stand_panel",
+    "title": "Stand Promo Panel",
+    "fields": [
+        {
+            "key": "field_stand_panel_tab_content",
+            "label": "Panel Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_stand_panel_title",
+            "label": "Panel Heading",
+            "name": "stand_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase white heading (H2). Use <br> for line breaks and wrap highlighted words in <span>...<\/span> (e.g. A STRONG STAND MAKES<br><span>ALL THE DIFFERENCE.<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "A STRONG STAND MAKES<br><span>ALL THE DIFFERENCE.<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_stand_panel_description",
+            "label": "Panel Description",
+            "name": "stand_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "White supporting paragraph displayed below the heading inside the dark green panel.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_stand_panel_button",
+            "label": "Action Button Link",
+            "name": "stand_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Select the destination URL, CTA label (e.g. DISCOVER OUR FARM), and link target.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_stand_panel_tab_media",
+            "label": "Card Image",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_stand_panel_image",
+            "label": "Spotlight Card Image",
+            "name": "stand_card_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the graphic or product photo displayed centered inside the white rounded card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,jpg,jpeg,webp,svg",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_stand_panel_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_stand_panel_card_pos",
+            "label": "Spotlight Card Position",
+            "name": "stand_card_position",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose whether the white rounded card sits on the right or left on desktop screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "right": "Card on Right (Default — Tree Care Style)",
+                "left": "Card on Left"
+            },
+            "default_value": "right",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_stand_panel_sec_bg",
+            "label": "Outer Section Background Color",
+            "name": "stand_section_bg_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the outer section background behind the panel, or keep the default white background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_stand_panel_bg_color",
+            "label": "Panel Background Color",
+            "name": "stand_panel_bg_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the rounded panel background color, or keep the default deep forest green (#001C0E).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#001C0E": "Deep Forest Green (#001C0E)",
+                "#102F1F": "Pine Green (#102F1F)",
+                "#AB0030": "Festive Crimson (#AB0030)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#001C0E)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/stand-panel"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Tree Care dark green Stand Promo Panel section block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794317332
+}

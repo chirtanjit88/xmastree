@@ -1,0 +1,213 @@
+{
+    "key": "group_xmastree_contact_form",
+    "title": "Contact Form & Photo",
+    "fields": [
+        {
+            "key": "field_contact_form_tab_content",
+            "label": "Form & Media",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_contact_form_title",
+            "label": "Form Panel Heading",
+            "name": "contact_form_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase heading (H2). Wrap highlighted words in <span>...<\/span> for crimson color (e.g. WE'D LOVE TO <span>HEAR FROM YOU<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "e.g. WE'D LOVE TO <span>HEAR FROM YOU<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_form_subtitle",
+            "label": "Form Subtitle",
+            "name": "contact_form_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Short introductory sentence displayed directly below the heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 2,
+            "placeholder": "e.g. Fill out the form below and our team will get back to you as soon as possible.",
+            "new_lines": ""
+        },
+        {
+            "key": "field_contact_form_shortcode",
+            "label": "Forminator Form Shortcode",
+            "name": "contact_form_shortcode",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Paste the Forminator form shortcode (e.g. [forminator_form id=\"565\"]) or form ID.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "[forminator_form id=\"565\"]",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_form_image",
+            "label": "Side Feature Photo",
+            "name": "contact_form_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the landscape photograph displayed beside the form panel.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg,jpeg,png,webp",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_contact_form_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_contact_form_media_position",
+            "label": "Photo Position",
+            "name": "contact_form_media_position",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose which side displays the feature photograph on desktop screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "right": "Photo on Right (Default — Contact Style)",
+                "left": "Photo on Left (Reversed)"
+            },
+            "default_value": "right",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_contact_form_bg_color",
+            "label": "Section Background Color",
+            "name": "contact_form_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the section background color, or keep the default Warm Cream (#FAF7F2).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FAF7F2)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/contact-form"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Contact Form & Photo section block field group with Forminator shortcode support.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794486134
+}

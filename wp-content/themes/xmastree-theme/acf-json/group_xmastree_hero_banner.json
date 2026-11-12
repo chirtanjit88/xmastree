@@ -1,0 +1,292 @@
+{
+    "key": "group_xmastree_hero_banner",
+    "title": "Hero Banner",
+    "fields": [
+        {
+            "key": "field_hero_tab_content",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_hero_badge_icon",
+            "label": "Badge Icon",
+            "name": "hero_badge_icon",
+            "aria-label": "",
+            "type": "icon_picker",
+            "instructions": "Select an icon for the hero badge pill (default: bi-stars).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "tabs": [
+                "bootstrap_icons",
+                "dashicons",
+                "media_library",
+                "url"
+            ],
+            "return_format": "string",
+            "allow_in_bindings": 0,
+            "library": "all",
+            "default_value": {
+                "type": null,
+                "value": null
+            }
+        },
+        {
+            "key": "field_hero_badge_text",
+            "label": "Badge Text",
+            "name": "hero_badge_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Text displayed inside the top badge.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Make Christmas Magical",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Make Christmas Magical",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hero_title",
+            "label": "Hero Title",
+            "name": "hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading of the hero banner. Line breaks are preserved.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hero_description",
+            "label": "Hero Description",
+            "name": "hero_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Paragraph text displayed below the hero title.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_hero_right_heading",
+            "label": "Right Side Heading (Optional)",
+            "name": "hero_right_heading",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optional decorative heading displayed on the right side of the hero banner in red Frijole font. Leave blank to hide. Line breaks are preserved.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_hero_tab_button",
+            "label": "Call To Action",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6af07fc817fa3",
+            "label": "Hero Button",
+            "name": "hero_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_hero_tab_media",
+            "label": "Media & Decoration",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_hero_background_image",
+            "label": "Custom Background Image",
+            "name": "hero_background_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload a custom hero background image. If empty, the default theme background is used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,svg,jpg,jpeg,webp",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_hero_show_divider",
+            "label": "Show Snowy Divider",
+            "name": "hero_show_divider",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toggle the decorative festive snow divider at the base of the hero.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show decorative torn-paper snow divider",
+            "default_value": 1,
+            "allow_in_bindings": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_hero_divider_image",
+            "label": "Custom Divider Image",
+            "name": "hero_divider_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Optional custom torn snow divider graphic. If empty, the default hero-divider.png is used.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_hero_show_divider",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,svg,webp",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/hero-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Hero Banner custom Gutenberg block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794487748
+}

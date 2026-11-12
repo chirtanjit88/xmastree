@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/events-listing",
+  "title": "Christmas Events Listing",
+  "description": "Dynamic farm events listing matching events.html with search bar, Event Category filter tabs, native Select Date picker filter, horizontal event cards, and numbered pagination.",
+  "category": "xmastree-blocks",
+  "icon": "calendar-alt",
+  "keywords": [
+    "events",
+    "calendar",
+    "christmas events",
+    "santa",
+    "activities",
+    "schedule",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "viewScript": "file:./view.js"
+}
+

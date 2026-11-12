@@ -1,0 +1,344 @@
+{
+    "key": "group_xmastree_video_spotlight",
+    "title": "Christmas Magic \/ Video Spotlight",
+    "fields": [
+        {
+            "key": "field_video_spotlight_tab_content",
+            "label": "Story Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_video_spotlight_title",
+            "label": "Section Heading",
+            "name": "spotlight_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase Playfair heading (H2). Use <br> for line breaks and wrap highlighted crimson words in <span>...<\/span> (e.g. A LITTLE EXTRA<br><span>CHRISTMAS MAGIC<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "A LITTLE EXTRA<br><span>CHRISTMAS MAGIC<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_video_spotlight_description",
+            "label": "Section Description",
+            "name": "spotlight_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Supporting copy displayed below the heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_video_spotlight_button",
+            "label": "Action Button Link",
+            "name": "spotlight_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Select the destination URL, button label (e.g. PLAN YOUR VISIT), and link target.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_video_spotlight_tab_video",
+            "label": "Video & Popup",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_video_spotlight_cover_image",
+            "label": "Video Cover Image",
+            "name": "spotlight_cover_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Thumbnail cover image displayed in the rounded card behind the frosted play button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,jpg,jpeg,webp,svg",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_video_spotlight_video_source",
+            "label": "Video Source Type",
+            "name": "spotlight_video_source",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose whether the popup autoplays a manually uploaded video, YouTube video, or Vimeo video.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "upload": "Manual Upload (MP4 \/ WebM \/ MOV)",
+                "youtube": "YouTube URL \/ Embed",
+                "vimeo": "Vimeo URL \/ Embed"
+            },
+            "default_value": "youtube",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_video_spotlight_video_file",
+            "label": "Uploaded Video File",
+            "name": "spotlight_video_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Upload or select an MP4, WebM, or MOV video file from the Media Library.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_video_spotlight_video_source",
+                        "operator": "==",
+                        "value": "upload"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4,webm,mov,m4v",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_video_spotlight_youtube_url",
+            "label": "YouTube URL, Video ID, or Embed Code",
+            "name": "spotlight_youtube_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Paste any YouTube watch\/share\/shorts URL, 11-character video ID, or full <iframe> embed code.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_video_spotlight_video_source",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "https:\/\/www.youtube.com\/watch?v=... or <iframe ...><\/iframe>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_video_spotlight_vimeo_url",
+            "label": "Vimeo URL, Video ID, or Embed Code",
+            "name": "spotlight_vimeo_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Paste any Vimeo link (including unlisted hash links), numeric video ID, or full <iframe> embed code.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_video_spotlight_video_source",
+                        "operator": "==",
+                        "value": "vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "https:\/\/vimeo.com\/123456789 or <iframe ...><\/iframe>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_video_spotlight_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_video_spotlight_video_position",
+            "label": "Video Column Position",
+            "name": "spotlight_video_position",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose whether the video cover card renders on the right or left on desktop screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "right": "Video on Right (Default — Ma's Corner Style)",
+                "left": "Video on Left"
+            },
+            "default_value": "right",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_video_spotlight_bg_color",
+            "label": "Section Background Color",
+            "name": "spotlight_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the default white (#FFFFFF) section background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/video-spotlight"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Ma's Christmas Corner featured story and popup video spotlight section block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794339216
+}

@@ -1,0 +1,156 @@
+{
+    "key": "group_xmastree_faqs",
+    "title": "Visitor FAQs",
+    "fields": [
+        {
+            "key": "field_faqs_tab_content",
+            "label": "FAQs Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_faqs_title",
+            "label": "Section Title",
+            "name": "faqs_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Centered heading text. Wrap words in <span>...<\/span> for crimson highlight (e.g. VISITOR <span>FAQS<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "VISITOR <span>FAQS<\/span>",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_faqs_open_first",
+            "label": "Open First FAQ By Default",
+            "name": "faqs_open_first",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Choose whether the first FAQ item starts expanded when visitors load the page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "message": "Expand the first FAQ item automatically",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_faqs_items",
+            "label": "FAQ Items",
+            "name": "faqs_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add each question and answer item displayed inside the FAQ accordion.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_faq_item_question",
+            "button_label": "Add FAQ",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_faq_item_question",
+                    "label": "Question",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Accordion question headline.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. Do I need to book in advance?",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_faqs_items"
+                },
+                {
+                    "key": "field_faq_item_answer",
+                    "label": "Answer",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Detailed answer shown inside the expanded accordion panel.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_faqs_items"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/faqs"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Visitor FAQs custom Gutenberg accordion block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794210259
+}

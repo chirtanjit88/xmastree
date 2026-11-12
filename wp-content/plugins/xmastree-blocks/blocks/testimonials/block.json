@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/testimonials",
+  "title": "Testimonials Carousel",
+  "description": "What Our Visitors Say section with manual review cards or automatic Google Reviews pulling via Owl Carousel.",
+  "category": "xmastree-blocks",
+  "icon": "format-quote",
+  "keywords": [
+    "testimonials",
+    "reviews",
+    "google reviews",
+    "google",
+    "visitors",
+    "carousel",
+    "rating",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}

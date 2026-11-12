@@ -1,0 +1,481 @@
+{
+    "key": "group_xmastree_content_section",
+    "title": "Content Section",
+    "fields": [
+        {
+            "key": "field_content_sec_tab_layout",
+            "label": "Layout & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_content_sec_layout",
+            "label": "Section Layout",
+            "name": "section_layout",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose how text, feature badges, and photography are arranged in this section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "split_right": "Split Content & Side Photo — Photo on Right (Tradition Style)",
+                "split_left": "Split Photo & Content — Photo on Left (More Than A Tree Style)",
+                "banner_left": "Panoramic Background Banner — Content on Left (Greener Tomorrow Style)"
+            },
+            "default_value": "split_right",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_content_sec_bg_color",
+            "label": "Section Background Color",
+            "name": "section_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the section background color, or keep the selected layout default.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Layout Default",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_content_sec_tab_content",
+            "label": "Section Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_content_sec_title",
+            "label": "Section Heading",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase heading (H2). Use <br> or Enter for line breaks, and wrap highlighted words in <span>...<\/span> (e.g. A FAMILY TRADITION<br><span>SINCE DAY ONE<\/span>).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_content_sec_description",
+            "label": "Section Description",
+            "name": "section_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Story paragraphs or introductory copy displayed below the heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_content_sec_tab_badges",
+            "label": "Feature Badges",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_content_sec_badges",
+            "label": "Feature Badges Grid",
+            "name": "section_badges",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Optional 2-column grid of circular icon badges (such as in the 'More Than Just A Tree' section). Leave empty if not needed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_content_sec_badge_title",
+            "button_label": "Add Feature Badge",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_content_sec_badge_icon",
+                    "label": "Badge Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Upload an icon image (PNG, SVG, or WebP) displayed inside the circular white badge.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,svg,jpg,jpeg,webp",
+                    "allow_in_bindings": 0,
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_content_sec_badges"
+                },
+                {
+                    "key": "field_content_sec_badge_title",
+                    "label": "Badge Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Uppercase badge title.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. SUSTAINABLE FARMING",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_content_sec_badges"
+                },
+                {
+                    "key": "field_content_sec_badge_desc",
+                    "label": "Badge Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Short supporting text displayed below the badge title.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_content_sec_badges"
+                }
+            ]
+        },
+        {
+            "key": "field_content_sec_tab_button",
+            "label": "Action Button",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_content_sec_button",
+            "label": "CTA Button Link",
+            "name": "section_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional call-to-action button destination, label, and target window. Leave unset to hide the button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_content_sec_button_style",
+            "label": "Button Style",
+            "name": "section_button_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Select the pill button appearance.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "about-btn-crimson": "Crimson Pill Button (#AB0030 — Tradition Section)",
+                "about-btn-forest": "Forest Green Pill Button (#102F1F — Greener Banner)",
+                "btn-crimson": "Standard Crimson Button",
+                "btn-outline-dark": "Dark Outline Button"
+            },
+            "default_value": "about-btn-crimson",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_content_sec_button_icon",
+            "label": "Button Icon",
+            "name": "section_button_icon",
+            "aria-label": "",
+            "type": "icon_picker",
+            "instructions": "Optional icon displayed inside the CTA button (e.g. arrow-right or calendar-event).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "tabs": [
+                "bootstrap_icons",
+                "dashicons",
+                "media_library",
+                "url"
+            ],
+            "return_format": "string",
+            "allow_in_bindings": 0,
+            "library": "all",
+            "default_value": {
+                "type": null,
+                "value": null
+            }
+        },
+        {
+            "key": "field_content_sec_button_icon_pos",
+            "label": "Button Icon Placement",
+            "name": "section_button_icon_position",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Place the button icon after the label (arrow style) or before the label (calendar style).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "after": "After Label (e.g. DISCOVER OUR FARM →)",
+                "before": "Before Label (e.g. Calendar Icon + Book Your Visit)"
+            },
+            "default_value": "after",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_content_sec_tab_media",
+            "label": "Media & Background",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_content_sec_image",
+            "label": "Side Feature Photo",
+            "name": "section_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the rounded photograph shown beside the text column in Split Left \/ Split Right layouts.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_content_sec_layout",
+                        "operator": "!=",
+                        "value": "banner_left"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,svg,jpg,jpeg,webp",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_content_sec_bg_image",
+            "label": "Full-Width Background Image",
+            "name": "section_background_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the full-bleed background photograph used in Panoramic Background Banner mode (or optional background image).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,jpg,jpeg,webp",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/content-section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Multi-layout inner page content section block (Split Left\/Right, Feature Badges, CTA, Panoramic Banner).",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794218479
+}

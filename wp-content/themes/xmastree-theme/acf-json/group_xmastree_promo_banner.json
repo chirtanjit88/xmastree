@@ -1,0 +1,240 @@
+{
+    "key": "group_xmastree_promo_banner",
+    "title": "Christmas Promo CTA Banner",
+    "fields": [
+        {
+            "key": "field_promo_banner_tab_content",
+            "label": "Banner Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_promo_banner_title",
+            "label": "Banner Heading",
+            "name": "promo_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Uppercase Playfair heading (H2). Use <br> for line breaks (e.g. UNIQUE CHRISTMAS<br>DECORATIONS AND GIFTS).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "UNIQUE CHRISTMAS<br>DECORATIONS AND GIFTS",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_promo_banner_description",
+            "label": "Banner Description",
+            "name": "promo_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Supporting copy displayed below the banner heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_promo_banner_button",
+            "label": "Action Button Link",
+            "name": "promo_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Select the destination URL, button label (e.g. PLAN YOUR VISIT), and link target.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_promo_banner_tab_style",
+            "label": "Background & Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_promo_banner_bg_image",
+            "label": "Banner Background Image",
+            "name": "promo_bg_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload or select the background photo for the rounded banner card (positioned right-center).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,jpg,jpeg,webp",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_promo_banner_overlay_style",
+            "label": "Image Gradient Overlay",
+            "name": "promo_overlay_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose None for pre-blended banners (e.g. mas-banner-rendered.png), or add a left gradient fade over standard photos for crisp text readability.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None (Default — Pre-Blended Banner Image)",
+                "green-gradient": "Dark Forest Green Left Gradient",
+                "dark-gradient": "Dark Charcoal Left Gradient"
+            },
+            "default_value": "none",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_promo_banner_card_bg",
+            "label": "Banner Panel Base Color",
+            "name": "promo_banner_bg_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the default dark green (#102F1F) banner panel fill.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#102F1F": "Dark Forest Green (#102F1F)",
+                "#001C0E": "Deep Evergreen (#001C0E)",
+                "#1F1F1F": "Charcoal (#1F1F1F)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#102F1F)",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_promo_banner_section_bg",
+            "label": "Outer Section Background Color",
+            "name": "promo_section_bg_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Optionally override the outer white (#FFFFFF) section backdrop.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#FFFFFF": "White (#FFFFFF)",
+                "#FFF6F5": "Soft Blush (#FFF6F5)",
+                "#FAF7F2": "Warm Cream (#FAF7F2)",
+                "#F1F1F1": "Soft Mist Grey (#F1F1F1)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "Use Default (#FFFFFF)",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "xmastree\/promo-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Ma's Christmas Corner rounded CTA promo banner block field group.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1794341526
+}

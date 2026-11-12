@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/numbered-steps",
+  "title": "Numbered Steps Section",
+  "description": "Two-tone heading, intro copy, and sequential numbered steps beside a rounded feature photograph (Start Fresh / Tree Care style).",
+  "category": "xmastree-blocks",
+  "icon": "editor-ol",
+  "keywords": [
+    "steps",
+    "numbered",
+    "start fresh",
+    "tree care",
+    "process",
+    "guide",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+

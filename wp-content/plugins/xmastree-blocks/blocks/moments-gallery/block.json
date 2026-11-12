@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "xmastree/moments-gallery",
+  "title": "Moments From The Farm",
+  "description": "Full-bleed dark green patterned section with heading, CTA button, and 6-image asymmetric gallery mosaic.",
+  "category": "xmastree-blocks",
+  "icon": "format-gallery",
+  "keywords": [
+    "moments",
+    "gallery",
+    "mosaic",
+    "photos",
+    "farm",
+    "xmastree"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
+
