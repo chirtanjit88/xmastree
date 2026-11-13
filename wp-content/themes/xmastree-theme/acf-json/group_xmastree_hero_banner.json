@@ -112,16 +112,16 @@
             "delay": 0
         },
         {
-            "key": "field_hero_right_heading",
-            "label": "Right Side Heading (Optional)",
-            "name": "hero_right_heading",
+            "key": "field_hero_top_heading",
+            "label": "Announcement Heading (Optional)",
+            "name": "hero_top_heading",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "Optional decorative heading displayed on the right side of the hero banner in red Frijole font. Leave blank to hide. Line breaks are preserved.",
+            "instructions": "Optional decorative announcement heading displayed across the banner above the banner text in red Frijole font. Leave blank to hide. HTML tags (like <sup>) and line breaks are preserved.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "100",
+                "width": "70",
                 "class": "",
                 "id": ""
             },
@@ -131,6 +131,32 @@
             "rows": 2,
             "placeholder": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_hero_top_heading_align",
+            "label": "Announcement Alignment",
+            "name": "hero_top_heading_align",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Alignment across the banner.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "center": "Centered across banner",
+                "left": "Left-aligned across banner"
+            },
+            "default_value": "center",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_hero_tab_button",

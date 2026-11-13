@@ -41,7 +41,14 @@ $badge_icon  = function_exists( 'get_field' ) ? get_field( 'hero_badge_icon' ) :
 $badge_text  = function_exists( 'get_field' ) ? (string) get_field( 'hero_badge_text' ) : '';
 $title         = function_exists( 'get_field' ) ? (string) get_field( 'hero_title' ) : '';
 $description   = function_exists( 'get_field' ) ? (string) get_field( 'hero_description' ) : '';
-$right_heading = function_exists( 'get_field' ) ? trim( (string) get_field( 'hero_right_heading' ) ) : '';
+$top_heading   = function_exists( 'get_field' ) ? trim( (string) get_field( 'hero_top_heading' ) ) : '';
+if ( '' === $top_heading && function_exists( 'get_field' ) ) {
+	$top_heading = trim( (string) get_field( 'hero_right_heading' ) );
+}
+$top_heading_align = function_exists( 'get_field' ) ? (string) get_field( 'hero_top_heading_align' ) : 'center';
+if ( empty( $top_heading_align ) ) {
+	$top_heading_align = 'center';
+}
 $button        = function_exists( 'get_field' ) ? get_field( 'hero_button' ) : null;
 
 $bg_image      = function_exists( 'get_field' ) ? get_field( 'hero_background_image' ) : null;
@@ -115,31 +122,35 @@ if ( $show_divider ) {
 	}
 }
 
-// Optional Right Side Heading (Red + Frijole).
-$right_heading_plain = trim( wp_strip_all_tags( str_ireplace( array( '<br>', '<br/>', '<br />' ), ' ', $right_heading ) ) );
-$has_right_heading   = '' !== $right_heading_plain;
-$formatted_right     = '';
-if ( $has_right_heading ) {
-	$has_explicit_br = 1 === preg_match( '/<br\b/i', $right_heading );
-	$formatted_right = $has_explicit_br ? wp_kses_post( $right_heading ) : nl2br( wp_kses_post( $right_heading ) );
+// Optional Top Announcement Heading (Red + Frijole across the banner).
+$top_heading_plain = trim( wp_strip_all_tags( str_ireplace( array( '<br>', '<br/>', '<br />' ), ' ', $top_heading ) ) );
+$has_top_heading   = '' !== $top_heading_plain;
+$formatted_top     = '';
+if ( $has_top_heading ) {
+	$has_explicit_br = 1 === preg_match( '/<br\b/i', $top_heading );
+	$formatted_top   = $has_explicit_br ? wp_kses_post( $top_heading ) : nl2br( wp_kses_post( $top_heading ) );
 }
 
 // AOS animation attributes (active on frontend; omitted in block editor preview to prevent display issues).
-$aos_badge = $is_preview ? '' : ' data-aos="fade-down" data-aos-duration="600"';
-$aos_title = $is_preview ? '' : ' data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"';
-$aos_desc  = $is_preview ? '' : ' data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"';
-$aos_btn   = $is_preview ? '' : ' data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"';
-$aos_right = $is_preview ? '' : ' data-aos="fade-left" data-aos-duration="800" data-aos-delay="200"';
-
-$row_class      = $has_right_heading ? 'row align-items-center g-4' : 'row';
-$left_col_class = $has_right_heading ? 'col-lg-7 col-xl-7' : 'col-lg-8 col-xl-7';
+$aos_top   = $is_preview ? '' : ' data-aos="fade-down" data-aos-duration="800"';
+$aos_badge = $is_preview ? '' : ' data-aos="fade-down" data-aos-duration="600" data-aos-delay="100"';
+$aos_title = $is_preview ? '' : ' data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"';
+$aos_desc  = $is_preview ? '' : ' data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"';
+$aos_btn   = $is_preview ? '' : ' data-aos="fade-up" data-aos-duration="800" data-aos-delay="400"';
 ?>
 
 <section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( implode( ' ', $class_names ) ); ?>"<?php echo $bg_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<div class="hero-overlay"></div>
 	<div class="container position-relative z-2">
-		<div class="<?php echo esc_attr( $row_class ); ?>">
-			<div class="<?php echo esc_attr( $left_col_class ); ?>">
+
+		<?php if ( $has_top_heading ) : ?>
+			<div class="hero-top-announcement text-<?php echo esc_attr( $top_heading_align ); ?>"<?php echo $aos_top; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+				<h2 class="hero-top-heading hero-right-heading"><?php echo $formatted_top; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
+			</div>
+		<?php endif; ?>
+
+		<div class="row">
+			<div class="col-lg-8 col-xl-7">
 				<div class="hero-content">
 
 					<?php if ( ! empty( $badge_text ) ) : ?>
@@ -173,15 +184,8 @@ $left_col_class = $has_right_heading ? 'col-lg-7 col-xl-7' : 'col-lg-8 col-xl-7'
 
 				</div>
 			</div>
-
-			<?php if ( $has_right_heading ) : ?>
-				<div class="col-lg-5 col-xl-5"<?php echo $aos_right; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-					<div class="hero-right-content">
-						<h2 class="hero-right-heading"><?php echo $formatted_right; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
-					</div>
-				</div>
-			<?php endif; ?>
 		</div>
+
 	</div>
 
 	<?php if ( $show_divider && ! empty( $divider_url ) ) : ?>

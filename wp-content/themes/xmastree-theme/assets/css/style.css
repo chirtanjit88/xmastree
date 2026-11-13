@@ -512,11 +512,12 @@ h6 {
 .hero-section {
   position: relative;
   background: url('../images/hero-bg.png') center center/cover no-repeat;
-  height: 662px;
   min-height: 662px;
+  height: auto;
   display: flex;
   align-items: flex-start;
-  padding-top: 175px;
+  padding-top: 155px;
+  padding-bottom: 90px;
   overflow: visible;
 }
 
@@ -582,7 +583,8 @@ h6 {
 /* Decorative Snowy Pine Divider (Figma: Top 575px, Height 119px, seamless transition at hero base) */
 .hero-divider-wrapper {
   position: absolute;
-  top: 575px;
+  top: auto;
+  bottom: -20px;
   left: 0;
   right: 0;
   width: 100%;
@@ -8201,46 +8203,60 @@ body.xmastree-lightbox-open {
   }
 }
 
-/* Hero Banner Optional Right Side Heading (Red + Frijole) */
-.hero-right-content {
+/* Hero Banner Top Announcement Heading (Red + Frijole across the banner) */
+.hero-top-announcement {
   position: relative;
   z-index: 2;
-  display: flex;
-  justify-content: flex-end;
-  text-align: right;
+  width: 100%;
+  margin-bottom: 24px;
 }
 
+.hero-top-announcement.text-center {
+  text-align: center;
+}
+
+.hero-top-announcement.text-left,
+.hero-top-announcement.text-start {
+  text-align: left;
+}
+
+.hero-top-heading,
 .hero-right-heading {
   font-family: var(--font-frijole);
-  font-size: clamp(24px, 2.5vw, 38px);
+  font-size: clamp(18px, 1.85vw, 28px);
   font-weight: 400;
   line-height: 1.35;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #C6011F;
   margin: 0;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.72), 0 1px 4px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.85), 0 2px 4px rgba(0, 0, 0, 0.95);
+}
+
+.hero-right-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: inherit;
 }
 
 @media (max-width: 991px) {
-  .hero-right-content {
-    justify-content: center;
-    text-align: center;
-    margin-top: 24px;
+  .hero-top-announcement {
+    text-align: center !important;
+    margin-bottom: 20px;
   }
 
+  .hero-top-heading,
   .hero-right-heading {
-    font-size: clamp(22px, 4vw, 30px);
+    font-size: clamp(17px, 3.6vw, 24px);
   }
 }
 
-@media (max-width: 767px) {
-  .hero-right-content {
-    margin-top: 20px;
-  }
-
+@media (max-width: 575px) {
+  .hero-top-heading,
   .hero-right-heading {
-    font-size: clamp(20px, 5.2vw, 26px);
+    font-size: clamp(15px, 4.4vw, 20px);
+    letter-spacing: 0.3px;
   }
 }
 
