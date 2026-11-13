@@ -1,2 +1,7 @@
+# Explicitly excluded HTML folder
 /html/
+html/
 
+# WordPress Core & Config files
+wp-config.php
+.htaccess
