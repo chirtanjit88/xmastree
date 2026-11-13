@@ -989,6 +989,7 @@ h6 {
   gap: 12px 32px;
 }
 
+.location-opening-date,
 .location-hours {
   display: inline-flex;
   align-items: center;
@@ -1001,6 +1002,7 @@ h6 {
   margin-bottom: 0;
 }
 
+.location-opening-date i,
 .location-hours i {
   color: var(--secondary-color);
   font-size: 1.15rem;
@@ -2963,6 +2965,7 @@ h6 {
   margin-bottom: 0;
 }
 
+.farm-location-date-row,
 .farm-location-hours-row {
   display: flex;
   align-items: center;
@@ -2971,6 +2974,15 @@ h6 {
   margin-bottom: 16px;
 }
 
+.farm-location-date-row {
+  margin-bottom: 8px;
+}
+
+.farm-location-date-row + .farm-location-hours-row {
+  margin-top: 0;
+}
+
+.farm-location-calendar,
 .farm-location-clock {
   color: #AB0030;
   font-size: 22px;
@@ -2978,6 +2990,7 @@ h6 {
   flex-shrink: 0;
 }
 
+.farm-location-date-row p,
 .farm-location-hours-row p {
   font-family: var(--font-sans);
   font-weight: 700;

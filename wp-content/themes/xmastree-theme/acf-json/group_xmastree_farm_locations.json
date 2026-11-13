@@ -113,6 +113,28 @@
                     "parent_repeater": "field_farm_locations_items"
                 },
                 {
+                    "key": "field_6af76c83650ec",
+                    "label": "Opening Date",
+                    "name": "opening_date",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Opening date text displayed next to the calendar icon (e.g. Opens 21st November).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "e.g. Opens 21st November",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_farm_locations_items"
+                },
+                {
                     "key": "field_farm_loc_item_hours",
                     "label": "Opening Hours",
                     "name": "hours",
@@ -255,5 +277,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1794294612
+    "modified": 1794600097
 }

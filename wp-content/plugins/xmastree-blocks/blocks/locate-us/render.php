@@ -38,6 +38,11 @@ if ( ! empty( $block['align'] ) ) {
 // 2. Retrieve ACF Fields
 // -----------------------------------------------------------------------------
 $title         = function_exists( 'get_field' ) ? (string) get_field( 'locate_title' ) : '';
+if ( str_contains( strtolower( $title ), 'u003c' ) ) {
+	$title = preg_replace( '/\\\\?u003c/i', '<', $title );
+	$title = preg_replace( '/\\\\?u003e/i', '>', $title );
+	$title = preg_replace( '/\\\\?u002f/i', '/', $title );
+}
 $locations_raw = function_exists( 'get_field' ) ? get_field( 'locate_locations' ) : null;
 $image_field   = function_exists( 'get_field' ) ? get_field( 'locate_image' ) : null;
 
@@ -47,20 +52,22 @@ if ( function_exists( 'have_rows' ) && have_rows( 'locate_locations' ) ) {
 	while ( have_rows( 'locate_locations' ) ) {
 		the_row();
 		$location_items[] = array(
-			'name'        => get_sub_field( 'name' ),
-			'description' => get_sub_field( 'description' ),
-			'hours'       => get_sub_field( 'hours' ),
-			'link'        => get_sub_field( 'link' ),
+			'name'         => get_sub_field( 'name' ),
+			'description'  => get_sub_field( 'description' ),
+			'opening_date' => get_sub_field( 'opening_date' ),
+			'hours'        => get_sub_field( 'hours' ),
+			'link'         => get_sub_field( 'link' ),
 		);
 	}
 } elseif ( is_array( $locations_raw ) && ! empty( $locations_raw ) ) {
 	foreach ( $locations_raw as $item ) {
 		if ( is_array( $item ) ) {
 			$location_items[] = array(
-				'name'        => $item['name'] ?? '',
-				'description' => $item['description'] ?? '',
-				'hours'       => $item['hours'] ?? '',
-				'link'        => $item['link'] ?? null,
+				'name'         => $item['name'] ?? '',
+				'description'  => $item['description'] ?? '',
+				'opening_date' => $item['opening_date'] ?? '',
+				'hours'        => $item['hours'] ?? '',
+				'link'         => $item['link'] ?? null,
 			);
 		}
 	}
@@ -71,6 +78,7 @@ $rendered_locations = array();
 foreach ( $location_items as $item ) {
 	$loc_name = trim( (string) ( $item['name'] ?? '' ) );
 	$loc_desc = trim( (string) ( $item['description'] ?? '' ) );
+	$loc_date = trim( (string) ( $item['opening_date'] ?? '' ) );
 	$loc_hrs  = trim( (string) ( $item['hours'] ?? '' ) );
 	$loc_link = $item['link'] ?? null;
 
@@ -85,17 +93,18 @@ foreach ( $location_items as $item ) {
 		$link_url = trim( $loc_link );
 	}
 
-	if ( '' === $loc_name && '' === $loc_desc && '' === $loc_hrs && '' === $link_url ) {
+	if ( '' === $loc_name && '' === $loc_desc && '' === $loc_date && '' === $loc_hrs && '' === $link_url ) {
 		continue;
 	}
 
 	$rendered_locations[] = array(
-		'name'        => $loc_name,
-		'description' => $loc_desc,
-		'hours'       => $loc_hrs,
-		'link_url'    => $link_url,
-		'link_title'  => $link_title,
-		'link_target' => $link_target,
+		'name'         => $loc_name,
+		'description'  => $loc_desc,
+		'opening_date' => $loc_date,
+		'hours'        => $loc_hrs,
+		'link_url'     => $link_url,
+		'link_title'   => $link_title,
+		'link_target'  => $link_target,
 	);
 }
 
@@ -174,8 +183,17 @@ $aos_right = $is_preview ? '' : ' data-aos="fade-left" data-aos-duration="800"';
 											<?php echo wp_kses_post( wpautop( $loc['description'] ) ); ?>
 										<?php endif; ?>
 
-										<?php if ( '' !== $loc['hours'] || '' !== $loc['link_url'] ) : ?>
+										<?php if ( '' !== $loc['opening_date'] || '' !== $loc['hours'] || '' !== $loc['link_url'] ) : ?>
 											<div class="location-bottom-row">
+												<?php if ( '' !== $loc['opening_date'] ) : ?>
+													<div class="location-opening-date">
+														<?php if ( ! str_contains( $loc['opening_date'], '<i' ) && ! str_contains( $loc['opening_date'], '<svg' ) ) : ?>
+															<i class="bi bi-calendar-event-fill" aria-hidden="true"></i>
+														<?php endif; ?>
+														<span><?php echo wp_kses_post( $loc['opening_date'] ); ?></span>
+													</div>
+												<?php endif; ?>
+
 												<?php if ( '' !== $loc['hours'] ) : ?>
 													<div class="location-hours">
 														<i class="bi bi-clock-fill" aria-hidden="true"></i> <?php echo esc_html( $loc['hours'] ); ?>
