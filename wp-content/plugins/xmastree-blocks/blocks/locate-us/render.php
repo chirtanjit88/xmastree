@@ -185,23 +185,29 @@ $aos_right = $is_preview ? '' : ' data-aos="fade-left" data-aos-duration="800"';
 
 										<?php if ( '' !== $loc['opening_date'] || '' !== $loc['hours'] || '' !== $loc['link_url'] ) : ?>
 											<div class="location-bottom-row">
-												<?php if ( '' !== $loc['opening_date'] ) : ?>
-													<div class="location-opening-date">
-														<?php if ( ! str_contains( $loc['opening_date'], '<i' ) && ! str_contains( $loc['opening_date'], '<svg' ) ) : ?>
-															<i class="bi bi-calendar-event-fill" aria-hidden="true"></i>
+												<?php if ( '' !== $loc['opening_date'] || '' !== $loc['hours'] ) : ?>
+													<div class="location-schedule">
+														<?php if ( '' !== $loc['opening_date'] ) : ?>
+															<div class="location-opening-date">
+																<?php if ( ! str_contains( $loc['opening_date'], '<i' ) && ! str_contains( $loc['opening_date'], '<svg' ) ) : ?>
+																	<i class="bi bi-calendar-event-fill" aria-hidden="true"></i>
+																<?php endif; ?>
+																<span><?php echo wp_kses_post( $loc['opening_date'] ); ?></span>
+															</div>
 														<?php endif; ?>
-														<span><?php echo wp_kses_post( $loc['opening_date'] ); ?></span>
-													</div>
-												<?php endif; ?>
 
-												<?php if ( '' !== $loc['hours'] ) : ?>
-													<div class="location-hours">
-														<i class="bi bi-clock-fill" aria-hidden="true"></i> <?php echo esc_html( $loc['hours'] ); ?>
+														<?php if ( '' !== $loc['hours'] ) : ?>
+															<div class="location-hours">
+																<i class="bi bi-clock-fill" aria-hidden="true"></i> <span><?php echo esc_html( $loc['hours'] ); ?></span>
+															</div>
+														<?php endif; ?>
 													</div>
 												<?php endif; ?>
 
 												<?php if ( '' !== $loc['link_url'] ) : ?>
-													<a href="<?php echo esc_url( $loc['link_url'] ); ?>" class="location-link"<?php echo ! empty( $loc['link_target'] ) ? ' target="' . esc_attr( $loc['link_target'] ) . '" rel="noopener noreferrer"' : ''; ?>><?php if ( '' !== $loc['link_title'] ) : ?><?php echo esc_html( $loc['link_title'] ); ?> <?php endif; ?><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+													<div class="location-link-wrap">
+														<a href="<?php echo esc_url( $loc['link_url'] ); ?>" class="location-link"<?php echo ! empty( $loc['link_target'] ) ? ' target="' . esc_attr( $loc['link_target'] ) . '" rel="noopener noreferrer"' : ''; ?>><?php if ( '' !== $loc['link_title'] ) : ?><?php echo esc_html( $loc['link_title'] ); ?> <?php endif; ?><i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+													</div>
 												<?php endif; ?>
 											</div>
 										<?php endif; ?>
