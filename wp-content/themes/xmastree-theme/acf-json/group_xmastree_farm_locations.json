@@ -113,12 +113,12 @@
                     "parent_repeater": "field_farm_locations_items"
                 },
                 {
-                    "key": "field_6af76c83650ec",
-                    "label": "Opening Date",
-                    "name": "opening_date",
+                    "key": "field_6afb42d8a5aad",
+                    "label": "Location Address",
+                    "name": "location_address",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "Opening date text displayed next to the calendar icon (e.g. Opens 21st November).",
+                    "instructions": "Full physical address for this farm location.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -129,7 +129,29 @@
                     "default_value": "",
                     "maxlength": "",
                     "allow_in_bindings": 0,
-                    "placeholder": "e.g. Opens 21st November",
+                    "placeholder": "e.g. 1375 Frankston - Flinders Rd, Somerville VIC 3912",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_farm_locations_items"
+                },
+                {
+                    "key": "field_6af76c83650ec",
+                    "label": "Opening Date",
+                    "name": "opening_date",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_farm_locations_items"
@@ -277,5 +299,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1794600097
+    "modified": 1794851788
 }

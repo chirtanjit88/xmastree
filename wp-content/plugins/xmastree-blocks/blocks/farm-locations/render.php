@@ -132,31 +132,45 @@ if ( is_string( $sanitized_bg_color ) && '' !== $sanitized_bg_color ) {
 $section_style_attr = ! empty( $section_styles ) ? ' style="' . esc_attr( implode( '; ', $section_styles ) . ';' ) . '"' : '';
 
 // -----------------------------------------------------------------------------
-// 4. Resolve Farm Locations Repeater (image [image], name [text], opening_date [text], hours [text], link [link])
+// 4. Resolve Farm Locations Repeater (image [image], name [text], location_address [text], opening_date [text], hours [text], link [link])
 // -----------------------------------------------------------------------------
 $location_rows = array();
 if ( function_exists( 'have_rows' ) && have_rows( 'farm_locations_items' ) ) {
 	while ( have_rows( 'farm_locations_items' ) ) {
 		the_row();
 		$location_rows[] = array(
-			'image'        => get_sub_field( 'image' ),
-			'name'         => get_sub_field( 'name' ),
-			'opening_date' => get_sub_field( 'opening_date' ),
-			'hours'        => get_sub_field( 'hours' ),
-			'link'         => get_sub_field( 'link' ),
+			'image'            => get_sub_field( 'image' ),
+			'name'             => get_sub_field( 'name' ),
+			'location_address' => get_sub_field( 'location_address' ),
+			'opening_date'     => get_sub_field( 'opening_date' ),
+			'hours'            => get_sub_field( 'hours' ),
+			'link'             => get_sub_field( 'link' ),
 		);
 	}
 } elseif ( is_array( $items_raw ) && ! empty( $items_raw ) ) {
 	foreach ( $items_raw as $row ) {
 		if ( is_array( $row ) ) {
 			$location_rows[] = array(
-				'image'        => $row['image'] ?? null,
-				'name'         => $row['name'] ?? '',
-				'opening_date' => $row['opening_date'] ?? '',
-				'hours'        => $row['hours'] ?? '',
-				'link'         => $row['link'] ?? null,
+				'image'            => $row['image'] ?? null,
+				'name'             => $row['name'] ?? '',
+				'location_address' => $row['location_address'] ?? '',
+				'opening_date'     => $row['opening_date'] ?? '',
+				'hours'            => $row['hours'] ?? '',
+				'link'             => $row['link'] ?? null,
 			);
 		}
+	}
+} elseif ( ! empty( $block['data']['farm_locations_items'] ) && is_numeric( $block['data']['farm_locations_items'] ) ) {
+	$count = (int) $block['data']['farm_locations_items'];
+	for ( $i = 0; $i < $count; $i++ ) {
+		$location_rows[] = array(
+			'image'            => $block['data'][ "farm_locations_items_{$i}_image" ] ?? null,
+			'name'             => $block['data'][ "farm_locations_items_{$i}_name" ] ?? '',
+			'location_address' => $block['data'][ "farm_locations_items_{$i}_location_address" ] ?? '',
+			'opening_date'     => $block['data'][ "farm_locations_items_{$i}_opening_date" ] ?? '',
+			'hours'            => $block['data'][ "farm_locations_items_{$i}_hours" ] ?? '',
+			'link'             => $block['data'][ "farm_locations_items_{$i}_link" ] ?? null,
+		);
 	}
 }
 
@@ -165,6 +179,10 @@ foreach ( $location_rows as $row ) {
 	$loc_name       = trim( (string) ( $row['name'] ?? '' ) );
 	$loc_name_plain = $extract_plain_text( $loc_name );
 	$has_loc_name   = '' !== $loc_name_plain;
+
+	$loc_address       = trim( (string) ( $row['location_address'] ?? '' ) );
+	$loc_address_plain = $extract_plain_text( $loc_address );
+	$has_loc_address   = '' !== $loc_address_plain;
 
 	$loc_date       = trim( (string) ( $row['opening_date'] ?? '' ) );
 	$loc_date_plain = $extract_plain_text( $loc_date );
@@ -190,19 +208,20 @@ foreach ( $location_rows as $row ) {
 		$link_url = trim( $loc_link );
 	}
 
-	if ( '' === $img_url && ! $has_loc_name && ! $has_loc_date && ! $has_loc_hours && '' === $link_url ) {
+	if ( '' === $img_url && ! $has_loc_name && ! $has_loc_address && ! $has_loc_date && ! $has_loc_hours && '' === $link_url ) {
 		continue;
 	}
 
 	$rendered_locations[] = array(
-		'img_url'      => $img_url,
-		'img_alt'      => $img_alt,
-		'name'         => $has_loc_name ? $loc_name : '',
-		'opening_date' => $has_loc_date ? $loc_date : '',
-		'hours'        => $has_loc_hours ? $loc_hours : '',
-		'link_url'     => $link_url,
-		'link_title'   => $link_title,
-		'link_target'  => $link_target,
+		'img_url'          => $img_url,
+		'img_alt'          => $img_alt,
+		'name'             => $has_loc_name ? $loc_name : '',
+		'location_address' => $has_loc_address ? $loc_address : '',
+		'opening_date'     => $has_loc_date ? $loc_date : '',
+		'hours'            => $has_loc_hours ? $loc_hours : '',
+		'link_url'         => $link_url,
+		'link_title'       => $link_title,
+		'link_target'      => $link_target,
 	);
 }
 
@@ -262,6 +281,10 @@ $total_locations = count( $rendered_locations );
 										<i class="bi bi-geo-alt-fill farm-location-pin" aria-hidden="true"></i>
 										<h3 class="farm-location-name"><?php echo esc_html( $loc['name'] ); ?></h3>
 									</div>
+								<?php endif; ?>
+
+								<?php if ( '' !== $loc['location_address'] ) : ?>
+									<p class="farm-location-address"><?php echo nl2br( wp_kses_post( $loc['location_address'] ) ); ?></p>
 								<?php endif; ?>
 
 								<?php if ( '' !== $loc['opening_date'] ) : ?>
