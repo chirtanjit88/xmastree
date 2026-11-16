@@ -276,15 +276,18 @@ $total_locations = count( $rendered_locations );
 									<img src="<?php echo esc_url( $loc['img_url'] ); ?>" alt="<?php echo esc_attr( $loc['img_alt'] ); ?>" class="farm-location-img">
 								<?php endif; ?>
 
-								<?php if ( '' !== $loc['name'] ) : ?>
+								<?php if ( '' !== $loc['name'] || '' !== $loc['location_address'] ) : ?>
 									<div class="farm-location-header">
 										<i class="bi bi-geo-alt-fill farm-location-pin" aria-hidden="true"></i>
-										<h3 class="farm-location-name"><?php echo esc_html( $loc['name'] ); ?></h3>
+										<div class="farm-location-title-wrap">
+											<?php if ( '' !== $loc['name'] ) : ?>
+												<h3 class="farm-location-name"><?php echo esc_html( $loc['name'] ); ?></h3>
+											<?php endif; ?>
+											<?php if ( '' !== $loc['location_address'] ) : ?>
+												<p class="farm-location-address"><?php echo nl2br( wp_kses_post( $loc['location_address'] ) ); ?></p>
+											<?php endif; ?>
+										</div>
 									</div>
-								<?php endif; ?>
-
-								<?php if ( '' !== $loc['location_address'] ) : ?>
-									<p class="farm-location-address"><?php echo nl2br( wp_kses_post( $loc['location_address'] ) ); ?></p>
 								<?php endif; ?>
 
 								<?php if ( '' !== $loc['opening_date'] ) : ?>

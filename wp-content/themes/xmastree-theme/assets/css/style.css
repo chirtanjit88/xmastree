@@ -2942,8 +2942,14 @@ h6 {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  min-height: 54px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.farm-location-title-wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
 }
 
 .farm-location-pin {
@@ -2967,21 +2973,17 @@ h6 {
 
 .farm-location-address {
   font-family: var(--font-sans);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.45;
-  color: #3D3D3D;
-  margin-top: 0;
-  margin-bottom: 12px;
-  padding-left: 40px;
+  line-height: 1.4;
+  color: #4A5568;
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
-.farm-location-item > .farm-location-date-row:first-of-type,
-.farm-location-header + .farm-location-hours-row,
-.farm-location-address + .farm-location-hours-row,
-.farm-location-header + div:last-child,
-.farm-location-address + div:last-child {
+.farm-location-item > div:last-child {
   margin-top: auto;
+  padding-top: 12px;
 }
 
 .farm-location-date-row,
@@ -2989,7 +2991,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 14px;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
