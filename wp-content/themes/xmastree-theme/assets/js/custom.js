@@ -238,17 +238,76 @@ $(document).ready(function () {
   });
 
   // ==========================================================================
-  // Smooth Scroll for Internal Anchors
+  // Smooth Scroll for Internal Anchors & Direct Hash Navigation
   // ==========================================================================
-  $('a[href^="#"]').on('click', function (e) {
-    const target = $(this.getAttribute('href'));
-    if (target.length) {
-      e.preventDefault();
-      $('html, body').stop().animate({
-        scrollTop: target.offset().top - 90
-      }, 600);
+  function getScrollOffset() {
+    const $header = $('.site-header');
+    const headerHeight = $header.length ? ($header.outerHeight() || 80) : 80;
+    const adminBarHeight = $('#wpadminbar').length ? ($('#wpadminbar').outerHeight() || 0) : 0;
+    return headerHeight + adminBarHeight + 25; // 25px breathing space
+  }
+
+  // Handle in-page anchor clicks (both href="#hash" and href="/path/#hash" or full URL)
+  $(document).on('click', 'a[href*="#"]', function (e) {
+    const hrefAttr = $(this).attr('href');
+    if (!hrefAttr || hrefAttr === '#' || hrefAttr === '#!' || hrefAttr.indexOf('#') === -1) {
+      return;
+    }
+
+    // Skip tab triggers, collapse triggers, or modal triggers
+    if ($(this).is('[data-bs-toggle], [data-toggle], [role="tab"], [role="button"]')) {
+      return;
+    }
+
+    try {
+      const url = new URL(this.href, window.location.href);
+      if (url.pathname === window.location.pathname && url.hash && url.hash.length > 1) {
+        const targetId = decodeURIComponent(url.hash);
+        const $target = $(targetId);
+        if ($target.length) {
+          e.preventDefault();
+          const targetTop = $target.offset().top - getScrollOffset();
+          $('html, body').stop().animate({
+            scrollTop: Math.max(0, targetTop)
+          }, 600);
+          if (window.history && typeof window.history.pushState === 'function') {
+            window.history.pushState(null, '', url.hash);
+          }
+        }
+      }
+    } catch (err) {
+      if (hrefAttr.startsWith('#') && hrefAttr.length > 1) {
+        try {
+          const $target = $(hrefAttr);
+          if ($target.length) {
+            e.preventDefault();
+            const targetTop = $target.offset().top - getScrollOffset();
+            $('html, body').stop().animate({
+              scrollTop: Math.max(0, targetTop)
+            }, 600);
+          }
+        } catch (selectorErr) {}
+      }
     }
   });
+
+  // Handle direct page loads with a hash in the URL (e.g. /real-christmas-trees/#deliveries)
+  if (window.location.hash && window.location.hash.length > 1) {
+    $(window).on('load', function () {
+      try {
+        const targetId = decodeURIComponent(window.location.hash);
+        const $target = $(targetId);
+        if ($target.length) {
+          setTimeout(function () {
+            const targetTop = $target.offset().top - getScrollOffset();
+            $('html, body').stop().animate({
+              scrollTop: Math.max(0, targetTop)
+            }, 400);
+          }, 200);
+        }
+      } catch (err) {}
+    });
+  }
 
   // ==========================================================================
   // Form Submission Handlers with User Feedback

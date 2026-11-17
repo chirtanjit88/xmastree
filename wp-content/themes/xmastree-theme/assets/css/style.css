@@ -60,9 +60,33 @@
   box-sizing: border-box;
 }
 
+/* Anchor Target Scroll Offset (Prevents fixed/sticky header clipping) */
+:root {
+  --anchor-scroll-offset: 110px;
+}
+
+body.admin-bar {
+  --anchor-scroll-offset: 142px;
+}
+
+@media (max-width: 782px) {
+  body.admin-bar {
+    --anchor-scroll-offset: 156px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--anchor-scroll-offset);
   font-size: 16px;
+}
+
+section[id],
+article[id],
+div[id].realtree-cta-section,
+.realtree-cta-section[id],
+#deliveries {
+  scroll-margin-top: var(--anchor-scroll-offset);
 }
 
 body {
@@ -8946,6 +8970,7 @@ body.xmastree-lightbox-open {
   text-align: center;
   padding: 70px 20px;
   overflow: hidden;
+  scroll-margin-top: var(--anchor-scroll-offset, 110px);
 }
 
 .realtree-cta-overlay {
