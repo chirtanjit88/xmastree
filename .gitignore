@@ -5,3 +5,7 @@ html/
 # WordPress Core & Config files
 wp-config.php
 .htaccess
+
+# WordPress Uploads (managed on server, excluded from Git)
+wp-content/uploads/
+/wp-content/uploads/

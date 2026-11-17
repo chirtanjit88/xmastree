@@ -182,27 +182,9 @@ $allowed_heading_tags = array(
 			}
 		}
 
-		$author_id     = (int) get_the_author_meta( 'ID' );
-		$author_name   = trim( (string) get_the_author() );
-		$author_bio    = trim( (string) get_the_author_meta( 'description', $author_id ) );
-		$author_avatar = $author_id > 0
-			? get_avatar(
-				$author_id,
-				96,
-				'',
-				$author_name,
-				array( 'class' => 'blog-details-author-avatar' )
-			)
-			: '';
-		$author_bio_avatar = $author_id > 0
-			? get_avatar(
-				$author_id,
-				180,
-				'',
-				$author_name,
-				array( 'class' => 'blog-author-bio-avatar' )
-			)
-			: '';
+		$author_id   = (int) get_the_author_meta( 'ID' );
+		$author_name = __( 'Christmas Tree Farm Team', 'xmastree-theme' );
+		$author_bio  = trim( (string) get_the_author_meta( 'description', $author_id ) );
 
 		$read_mins   = xmastree_get_reading_time( $current_post_id );
 		$date_iso    = get_the_date( 'c', $current_post_id );
@@ -288,9 +270,6 @@ $allowed_heading_tags = array(
 
 				<div class="blog-details-meta" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
 					<div class="blog-details-author">
-						<?php if ( ! empty( $author_avatar ) ) : ?>
-							<?php echo $author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-						<?php endif; ?>
 						<div class="blog-details-author-info">
 							<?php if ( '' !== $author_name ) : ?>
 								<span><?php echo esc_html( $author_name ); ?></span>
@@ -411,9 +390,6 @@ $allowed_heading_tags = array(
 								$author_story_count = $author_id > 0 ? (int) count_user_posts( $author_id, 'post', true ) : 0;
 								?>
 								<div class="blog-author-bio-box" data-aos="fade-up">
-									<?php if ( ! empty( $author_bio_avatar ) ) : ?>
-										<?php echo $author_bio_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-									<?php endif; ?>
 									<div class="blog-author-bio-content">
 										<?php if ( '' !== $author_name ) : ?>
 											<h4><?php echo esc_html( $author_name ); ?></h4>
