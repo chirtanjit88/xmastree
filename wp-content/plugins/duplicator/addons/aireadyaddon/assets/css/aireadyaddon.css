@@ -1,0 +1,62 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./addons/aireadyaddon/assets/sass/main.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/*!
+DUPLICATOR AI READY ADDON STYLE
+*/
+/**
+ * Foundation for Sites
+ * Version 6.9.0
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+.dup-styles .dupli-tool-ai {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+.dup-styles .dupli-tool-ai p,
+.dup-styles .dupli-tool-ai div {
+  font-size: 15px;
+}
+.dup-styles .dupli-tool-ai .dupli-tool-ai-title {
+  margin: 20px 0;
+}
+.dup-styles .dupli-tool-ai .dupli-tool-ai-headline {
+  margin: 1.5rem 0 1rem;
+}
+.dup-styles .dupli-tool-ai .dupli-tool-ai-sections {
+  -moz-columns: 2 360px;
+       columns: 2 360px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-bottom: 1.5rem;
+}
+.dup-styles .dupli-tool-ai .dupli-tool-ai-section {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+}
+.dup-styles .dupli-tool-ai .dupli-tool-ai-group {
+  margin: 0 0 0.5rem;
+  text-align: left;
+}
+.dup-styles .dupli-tool-ai .dupli-tool-ai-abilities {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  text-align: left;
+}
+.dup-styles .dupli-tool-ai .dupli-tool-ai-abilities li {
+  color: #1D2327;
+}
+.dup-styles .dupli-tool-ai .dupli-tool-ai-abilities li i.fa {
+  color: #fe4716;
+  margin-right: 6px;
+}
+.dup-styles .dupli-tool-ai .dupli-tool-ai-card {
+  margin: 0 0 1.5rem;
+  text-align: left;
+}

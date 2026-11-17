@@ -141,7 +141,7 @@ $format_event_date_box = static function ( int $target_post_id ): array {
 	}
 
 	return array(
-		'iso'   => $start_raw,
+		'iso'   => (string) gmdate( 'Y-m-d', $start_ts ),
 		'label' => $label,
 	);
 };
@@ -364,6 +364,7 @@ if ( '' !== $selected_date ) {
 			'key'     => 'event_start_date',
 			'value'   => $selected_date,
 			'compare' => '=',
+			'type'    => 'DATE',
 		),
 		array(
 			'relation' => 'AND',
@@ -401,20 +402,26 @@ if ( '' !== $selected_date ) {
 }
 
 if ( 'event_start_date' === $orderby_field ) {
-	$meta_clauses['event_date_sort_clause'] = array(
-		'relation' => 'OR',
-		array(
+	$meta_clauses['event_date_sort_group'] = array(
+		'relation'                => 'OR',
+		'event_start_date_clause' => array(
 			'key'     => 'event_start_date',
+			'type'    => 'DATE',
 			'compare' => 'EXISTS',
 		),
-		array(
+		'event_no_date_clause'    => array(
 			'key'     => 'event_start_date',
 			'compare' => 'NOT EXISTS',
 		),
 	);
 	$query_args['orderby'] = array(
-		'event_date_sort_clause' => $order_field,
-		'date'                   => $order_field,
+		'event_start_date_clause' => $order_field,
+		'title'                  => 'ASC',
+	);
+} elseif ( 'menu_order' === $orderby_field ) {
+	$query_args['orderby'] = array(
+		'menu_order' => $order_field,
+		'date'       => $order_field,
 	);
 } else {
 	$query_args['orderby'] = $orderby_field;

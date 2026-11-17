@@ -1,0 +1,13 @@
+// Pro badge of the Pro-only abilities LiteBase adds after the Tools > AI abilities groups
+.dupli-tool-ai .dupli-tool-ai-abilities {
+    .dupli-litebase-pro-label {
+        background: mix($litebase-upgrade-color, $white-color, 10%);
+        border-radius: 3px;
+        color: $litebase-upgrade-color-hover;
+        display: inline-block;
+        font-size: .75rem;
+        font-weight: 600;
+        margin-left: 6px;
+        padding: .15rem .5rem;
+    }
+}

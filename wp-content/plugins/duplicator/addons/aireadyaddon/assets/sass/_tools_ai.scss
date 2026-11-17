@@ -1,0 +1,59 @@
+// Tools > AI: centred product page
+.dupli-tool-ai {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+
+    p,
+    div {
+        font-size: 15px;
+    }
+
+    .dupli-tool-ai-title {
+        margin: 20px 0;
+    }
+
+    .dupli-tool-ai-headline {
+        margin: 1.5rem 0 1rem;
+    }
+
+    // Two balanced columns of sections; one on narrow screens
+    .dupli-tool-ai-sections {
+        columns: 2 360px;
+        column-gap: 40px;
+        margin-bottom: 1.5rem;
+    }
+
+    .dupli-tool-ai-section {
+        break-inside: avoid;
+    }
+
+    .dupli-tool-ai-group {
+        margin: 0 0 .5rem;
+        text-align: left;
+    }
+
+    .dupli-tool-ai-abilities {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        list-style: none;
+        margin: 0 0 1.5rem;
+        padding: 0;
+        text-align: left;
+
+        li {
+            color: $black-color;
+
+            i.fa {
+                color: $primary-color;
+                margin-right: 6px;
+            }
+        }
+    }
+
+    .dupli-tool-ai-card {
+        margin: 0 0 1.5rem;
+        text-align: left;
+    }
+}
