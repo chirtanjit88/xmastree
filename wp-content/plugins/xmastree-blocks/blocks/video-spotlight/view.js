@@ -120,7 +120,7 @@
 				source.type = mime;
 			}
 			video.appendChild( source );
-			video.src = src;
+			video.load();
 
 			stageEl.appendChild( video );
 
